@@ -6,7 +6,7 @@ html {
 	font-family: $text__fontname;
 	// Make everything look a little nicer in webkit
 	-webkit-font-smoothing: antialiased;
-	font-size: $text__p;
+	font-size: calc(100vw / 1920 * 10) ;
 	font-weight: 400;
 }
 

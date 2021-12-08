@@ -3,9 +3,8 @@
 // Common
 @import "common/reset";
 @import "common/variables";
-// Import sassflexbox http://sassflexboxgrid.com/views/documentation.html
+@import "common/shared";
 @import "common/wp-core";
-@import "common/grid";
 @import "common/mixin";
 @import "common/general";
 @import "common/helper";
