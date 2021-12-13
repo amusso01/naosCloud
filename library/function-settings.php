@@ -254,7 +254,7 @@ function we_login_logo() {
 		<?php endif; ?>
 		}
 	
-      #login h1 a, .login h1 a {
+    #login h1 a, .login h1 a {
       background-image: url("data:image/svg+xml,%3Csvg id='Group_1059' data-name='Group 1059' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='224.171' height='68.344' viewBox='0 0 224.171 68.344'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_334' data-name='Rectangle 334' width='224.171' height='61.803' fill='none'/%3E%3C/clipPath%3E%3CclipPath id='clip-path-3'%3E%3Crect id='Rectangle_330' data-name='Rectangle 330' width='46.739' height='46.746' fill='none'/%3E%3C/clipPath%3E%3CclipPath id='clip-path-4'%3E%3Crect id='Rectangle_329' data-name='Rectangle 329' width='46.727' height='46.727' fill='none'/%3E%3C/clipPath%3E%3CclipPath id='clip-path-5'%3E%3Crect id='Rectangle_332' data-name='Rectangle 332' width='29.621' height='29.619' fill='none'/%3E%3C/clipPath%3E%3CclipPath id='clip-path-6'%3E%3Crect id='Rectangle_331' data-name='Rectangle 331' width='29.618' height='29.618' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Group_1058' data-name='Group 1058' clip-path='url(%23clip-path)'%3E%3Cg id='Group_1057' data-name='Group 1057'%3E%3Cg id='Group_1056' data-name='Group 1056' clip-path='url(%23clip-path)'%3E%3Cg id='Group_1050' data-name='Group 1050' opacity='0.55'%3E%3Cg id='Group_1049' data-name='Group 1049'%3E%3Cg id='Group_1048' data-name='Group 1048' clip-path='url(%23clip-path-3)'%3E%3Cg id='Group_1047' data-name='Group 1047' transform='translate(0.006 0.009)'%3E%3Cg id='Group_1046' data-name='Group 1046' clip-path='url(%23clip-path-4)'%3E%3Cpath id='Path_2480' data-name='Path 2480' d='M23.37,38.181A23.263,23.263,0,0,0,46.229,46.23,23.278,23.278,0,0,0,38.18,23.367,23.264,23.264,0,0,0,46.229.508,23.265,23.265,0,0,0,23.37,8.557,23.279,23.279,0,0,0,.51.513,23.253,23.253,0,0,0,6.813,21.8q.844.842,1.746,1.578-.894.738-1.746,1.579A23.254,23.254,0,0,0,.51,46.239,23.278,23.278,0,0,0,23.37,38.19' transform='translate(-0.006 -0.009)' fill='%23ffb400'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg id='Group_1055' data-name='Group 1055' transform='translate(8.559 8.564)' opacity='0.6'%3E%3Cg id='Group_1054' data-name='Group 1054'%3E%3Cg id='Group_1053' data-name='Group 1053' clip-path='url(%23clip-path-5)'%3E%3Cg id='Group_1052' data-name='Group 1052' transform='translate(0.004)'%3E%3Cg id='Group_1051' data-name='Group 1051' clip-path='url(%23clip-path-6)'%3E%3Cpath id='Path_2481' data-name='Path 2481' d='M48,33.2a23.106,23.106,0,0,0-10.048-4.76,23.127,23.127,0,0,0-4.761-10.05,23.111,23.111,0,0,0-4.76,10.05,23.106,23.106,0,0,0-10.05,4.76,23.106,23.106,0,0,0,10.05,4.76,23.106,23.106,0,0,0,4.76,10.05A23.119,23.119,0,0,0,37.95,37.96,23.106,23.106,0,0,0,48,33.2' transform='translate(-18.383 -18.391)' fill='%23ffb400'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cpath id='Path_2482' data-name='Path 2482' d='M48.95,39.439a24.57,24.57,0,0,0-9.521,0,24.615,24.615,0,0,0,0,9.519,24.57,24.57,0,0,0,9.521,0,24.56,24.56,0,0,0,0-9.519' transform='translate(-20.82 -20.825)' fill='%23ffb400'/%3E%3Cpath id='Path_2483' data-name='Path 2483' d='M162.558,44.886v-.581q0-9.814,0-19.628a1.561,1.561,0,0,1,1.163-1.577,1.532,1.532,0,0,1,1.715.776,1.867,1.867,0,0,1,.17.961q0,11.842,0,23.685c0,.173-.008.346,0,.519a1.523,1.523,0,0,1-2.347,1.364,4.838,4.838,0,0,1-1.432-1.478q-7.367-9.41-14.723-18.828c-.461-.589-.928-1.173-1.4-1.772-.173.185-.1.366-.1.527q-.006,10.1,0,20.194a1.476,1.476,0,0,1-1.6,1.615,1.519,1.519,0,0,1-1.44-1.467c-.008-.125,0-.251,0-.377q0-11.914-.007-23.827a1.67,1.67,0,0,1,.968-1.724,2.085,2.085,0,0,1,2.307.442c.545.607,1.032,1.266,1.537,1.909q7.35,9.363,14.7,18.726a1.644,1.644,0,0,0,.5.541' transform='translate(-76.169 -12.318)' fill='%230b242e'/%3E%3Cpath id='Path_2484' data-name='Path 2484' d='M348.732,50.614a13.4,13.4,0,0,1-9.645-3.786,13.545,13.545,0,0,1-3.94-7.4,14.343,14.343,0,0,1,1.026-8.876,13.142,13.142,0,0,1,9.893-7.814,13.735,13.735,0,0,1,9.909,1.622,13.307,13.307,0,0,1,6.369,9.034,14.233,14.233,0,0,1-1.091,9.451,13.228,13.228,0,0,1-9.711,7.512,12.237,12.237,0,0,1-2.812.26M359.444,36.75a17.558,17.558,0,0,0-.234-2.45,10.618,10.618,0,0,0-9.056-8.831,10.2,10.2,0,0,0-8.415,2.555,10.633,10.633,0,0,0-3.5,7,11.326,11.326,0,0,0,3.484,9.956,10.551,10.551,0,0,0,12.54,1.258,10.976,10.976,0,0,0,5.179-9.484' transform='translate(-178.929 -11.993)' fill='%230b242e'/%3E%3Cpath id='Path_2485' data-name='Path 2485' d='M250.962,43.2c-2.328,0-4.657.007-6.985-.008a.571.571,0,0,0-.622.415c-.86,1.966-1.748,3.92-2.625,5.878a1.535,1.535,0,0,1-1.282,1.044,1.464,1.464,0,0,1-1.491-2.192q1.14-2.529,2.3-5.049,4.363-9.531,8.727-19.062a2.092,2.092,0,0,1,1.878-1.414,2.022,2.022,0,0,1,2.179,1.3c.719,1.548,1.422,3.1,2.133,4.657q3.406,7.437,6.813,14.874,1.009,2.2,2.026,4.4a1.715,1.715,0,0,1-.028,1.91,1.547,1.547,0,0,1-2.643-.346c-.375-.722-.685-1.478-1.023-2.219-.577-1.269-1.164-2.535-1.723-3.813a.555.555,0,0,0-.6-.385c-2.344.013-4.688.007-7.032.007m.075-16.519c-.178.024-.181.154-.224.25Q247.869,33.466,244.92,40c-.146.322-.036.324.224.324q5.807-.006,11.612,0c.332,0,.411-.045.256-.384q-1.8-3.935-3.561-7.884c-.809-1.8-1.614-3.6-2.414-5.381' transform='translate(-127.053 -12.186)' fill='%230b242e'/%3E%3Cpath id='Path_2486' data-name='Path 2486' d='M448.821,50.644a16,16,0,0,1-10.334-3.7,1.53,1.53,0,0,1-.188-2.151,1.5,1.5,0,0,1,2.109-.2,13.074,13.074,0,0,0,4.085,2.47,11.152,11.152,0,0,0,7.122.344,4.323,4.323,0,0,0,3.173-2.948,3.862,3.862,0,0,0-2.212-4.99,21.44,21.44,0,0,0-4.707-1.454,18.877,18.877,0,0,1-6.114-2.218,6.261,6.261,0,0,1-2.944-5.932A7.376,7.376,0,0,1,444.894,23a13.944,13.944,0,0,1,11.278,2.118,1.645,1.645,0,0,1,.913,1.8,1.523,1.523,0,0,1-2.385.9,12.542,12.542,0,0,0-3.715-1.886,9.862,9.862,0,0,0-5.937-.043,4.232,4.232,0,0,0-2.826,5.609,4.157,4.157,0,0,0,2.311,2.166,22.078,22.078,0,0,0,4.8,1.472,17.993,17.993,0,0,1,5.8,2.137,6.248,6.248,0,0,1,2.986,6.448c-.387,3.469-2.544,5.423-5.722,6.433a12.123,12.123,0,0,1-3.579.493' transform='translate(-234.007 -12.083)' fill='%230b242e'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Ctext id='CLOUD' transform='translate(119.086 62.344)' fill='%23848484' font-size='23' font-family='Quicksand' font-weight='600' letter-spacing='0.3em'%3E%3Ctspan x='0' y='0'%3ECLOUD%3C/tspan%3E%3C/text%3E%3C/svg%3E%0A");
 			background-repeat: no-repeat;
 			background-size: 180px;
@@ -264,7 +264,7 @@ function we_login_logo() {
 			font-family: <?php echo $fontFamily ?>!important;
 			<?php endif; ?>
         }
-      body.login div#login form#loginform p.submit input#wp-submit {
+    body.login div#login form#loginform p.submit input#wp-submit {
 		
 			<?php if($fontFamily): ?>
 			font-family: <?php echo $fontFamily ?>!important;
@@ -282,6 +282,27 @@ function we_login_logo() {
       font-size: 15px;
       letter-spacing:1.5px
 		}
+    body.login div#login form#lostpasswordform p.submit input#wp-submit {
+		
+      <?php if($fontFamily): ?>
+      font-family: <?php echo $fontFamily ?>!important;
+      <?php endif; ?>
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 3px;
+      border:none;
+      height: 40px;
+      background-color: #00455E;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing:1.5px
+    }
+    body.login p {
+      color:#00455E;
+    }
 		body.login div#login .message{
 			border: 2px solid <?php echo $mainColor ?>;
 		}
@@ -289,15 +310,19 @@ function we_login_logo() {
 			background-color: #FFCC00;
       color:#00455E;
 		}
-        body.login div#login p#nav a:hover {
-            color: <?php echo $mainColor ?>;
-            text-decoration:underline;
-        }
-        body.login div#login p#backtoblog a:hover {
-            color: <?php echo $mainColor ?>;
-            text-decoration:underline;
-        }
-        body.login div#login form#loginform {
+    body.login div#login form#lostpasswordform p.submit input#wp-submit:hover{
+			background-color: #FFCC00;
+      color:#00455E;
+		}
+    body.login div#login p#nav a:hover {
+        color: <?php echo $mainColor ?>;
+        text-decoration:underline;
+    }
+    body.login div#login p#backtoblog a:hover {
+        color: <?php echo $mainColor ?>;
+        text-decoration:underline;
+    }
+    body.login div#login form#loginform {
 	
 			<?php if($fontFamily): ?>
 			font-family: <?php echo $fontFamily ?>!important;
@@ -312,6 +337,13 @@ function we_login_logo() {
 			box-shadow: 0 0 0 1px <?php echo $mainColor ?>;
 		}
 		body.login div#login form#loginform div.wp-pwd button.button .dashicons{
+			color: <?php echo $mainColor ?>;
+		}
+		body.login div#login form#lostpasswordform input[type="text"]:focus, body.login div#login form#loginform input[type="password"]:focus {
+			border-color: <?php echo $mainColor ?>;
+			box-shadow: 0 0 0 1px <?php echo $mainColor ?>;
+		}
+		body.login div#login form#lostpasswordform div.wp-pwd button.button .dashicons{
 			color: <?php echo $mainColor ?>;
 		}
 /* NAOS STYLE */
@@ -432,6 +464,14 @@ function we_login_logo() {
       letter-spacing:1.3px;
       color:#00455E;
     }
+    #loginform.shake .login_icon_top{
+      display:none;
+    }
+    #lostpasswordform label{
+      letter-spacing:1.3px;
+      color:#00455E;
+    }
+
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'we_login_logo' );
