@@ -37,7 +37,7 @@ require get_template_directory() . '/library/function-widget.php';
   CUSTOMIZER
 ==================================================================================*/
 // set up the wordpress customizer for the user
-require get_template_directory() . '/library/function-customizer.php';
+
 
 
 /*==================================================================================
@@ -55,4 +55,8 @@ require get_template_directory() . '/library/function-custom.php';
 
 
 
-
+/*==================================================================================
+  CUSTOM POST TYPE AND TAX
+==================================================================================*/
+// set up the wordpress customizer for the user
+require get_template_directory() . '/library/function-taxonomy.php';

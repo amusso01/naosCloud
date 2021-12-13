@@ -10,10 +10,9 @@
 
 $breakpoints:(
   'phone': 640px,
-  'slideshow': 800px,
-  'tablet-land': 920px,
-  'tablet': 1140px,
-  'desktop': 1360px,
+  'phone-land': 820px,
+  'tablet': 1024px,
+  'desktop': 1366px,
   'wideScreen': 1490px
   ) !default;
   
@@ -38,13 +37,13 @@ $header__fontname: 'Quicksand', sans-serif; //  300 400 600
 
 /* from customiser root -> see function-customiser.php
 /––––––––––––––––––––––––*/
-$color__main: var(--main_color);
-$color__text: var(--text_color);
-$color__link: var(--link_color);
-$color__link-hover: var(--link_color_hover);
-$color__footerBg: var(--footer-color);
+$color__main: #043f4d;
+$color__text: #848484;
+$color__link: $color__main;
+
 $color__bright: #ffffff;
-$color__dark: #353434;
+$color__accent: #F8B41E;
+$color__footerBg: $color__bright;
 
 /*==================================================================================
   BUTTONS
@@ -59,12 +58,12 @@ $button__radius: 30px;
   TYPOGRAPHY
 ==================================================================================*/
 
-$text__h1: var(--text-h1);
-$text__h2: var(--text-h2);
-$text__h3: var(--text-h3);
-$text__h4: var(--text-h4);
-$text__h5: var(--text-h5);
-$text__h6: var(--text-h6);
-$text__p: var(--text-p);
+$text__h1: 2.5rem;
+$text__h2:2rem;
+$text__h3: 1.4rem;
+$text__h4: 1.3rem;
+$text__h5: 1.8rem;
+$text__h6: 1.5rem;
+$text__p: 1.5rem;
 
 $font__weight: 400; //This is the global font-weight for text, link etc.. Specify header weight separetelly

@@ -321,7 +321,7 @@ function we_login_logo() {
       background-position:center center;
       background-repeat:no-repeat;
       background-size:cover;
-    
+      padding: 0 1rem;
       display: flex;
       align-items: center;
       justify-content: center;

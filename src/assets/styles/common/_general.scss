@@ -6,10 +6,18 @@ html {
 	font-family: $text__fontname;
 	// Make everything look a little nicer in webkit
 	-webkit-font-smoothing: antialiased;
-	font-size: calc(100vw / 1920 * 10) ;
+	font-size: calc(100vw / 1366 * 10) ;
 	font-weight: 400;
+  @include media('<tablet'){
+    font-size: calc(100vw / 820 * 10) ;
+  }
+  @include media('<phone'){
+    font-size: calc(100vw / 460 * 10) ;
+  }
 }
-
+body{
+	font-size: $text__p;
+}
 /**
  * Generic Typography
  */
@@ -58,7 +66,7 @@ a {
 	text-decoration: none;
 	font-size: $text__p;
 	&:hover {
-		color: $color__link-hover;
+		color: $color__link;
 	}
 }
 
@@ -80,6 +88,7 @@ h5,
 h6 {
 	margin: 0px;
 	font-family: $header__fontname;
+  font-weight: 600;
 }
 
 h1,
