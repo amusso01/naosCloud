@@ -10,28 +10,40 @@
 get_header();
 ?>
 
-<section class="site-hero">
-	
-	<?php get_template_part( 'components/front/hero' ); ?>
+<div class="site-container">
 
-</section>
+  <?php get_template_part( 'components/page/side-nav' ); ?>
 
-<main class="main homepage-main" role="main">
+  <main class="main homepage-main" role="main">
 
-	<?php if ( have_posts() ) : ?>
+    <section class="site-hero">
+      
+      <?php get_template_part( 'components/front/hero' ); ?>
 
-		<?php while ( have_posts() ) : the_post(); // @codingStandardsIgnoreLine ?>
+    </section>
 
-			<?php get_template_part( 'template-parts/content', 'front' ) ?>
+    <?php if ( have_posts() ) : ?>
 
-		<?php endwhile; ?>
+      <?php while ( have_posts() ) : the_post(); // @codingStandardsIgnoreLine ?>
 
-	<?php else :?>
+        <?php get_template_part( 'template-parts/content', 'front' ) ?>
 
-		<?php get_template_part( 'template-parts/content', 'none' );?>
+      <?php endwhile; ?>
 
-	<?php endif; ?>
+    <?php else :?>
 
-</main>
+      <?php get_template_part( 'template-parts/content', 'none' );?>
+
+    <?php endif; ?>
+
+  </main>
+
+  
+
+</div>
+
+
+
+
 
 <?php get_footer(); ?>

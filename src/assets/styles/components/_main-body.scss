@@ -1,0 +1,35 @@
+#content{
+  position: relative;
+  top: 60px;
+  left: 75px;
+  width: calc(100vw - 75px);
+}
+
+
+// MAIN FLEX CONTAINER
+
+.site-container{
+  display: flex;
+  align-items: flex-start;
+  .main-nav{
+    width: 75px;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 5;
+  }
+  .main-subNav{
+    width: 1.7rem;
+    min-height: calc(100vh - 60px);
+    z-index: 1;
+    transition: width .4s , left .4s;
+    transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+    &.open{
+      width: 24rem;
+    }
+  }
+  .main{
+    width: 100%;
+  }
+}

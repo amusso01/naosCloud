@@ -13,13 +13,17 @@
 	overflow: hidden;
 }
 
-:focus {
-	outline: 0;
-}
+// *:focus {
+// 	outline: 0;
+// }
 
 .img-fluid {
 	max-width: 100%;
 	height: auto;
+}
+
+.hidden_mobile {
+	display: none;
 }
 
 %cover {
