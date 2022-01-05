@@ -17,7 +17,7 @@ function svgTask(){
             imageminSvgo({
                 plugins: [
                     {removeViewBox: false},
-                    {prefixIds: 'am-'},
+                    {prefixIds: true},
                     {cleanupIDs : true},
                 ]
             })

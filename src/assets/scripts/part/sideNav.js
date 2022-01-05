@@ -11,8 +11,6 @@ export function sideNav(){
 
   sideIcon.addEventListener('click', ()=>{ 
 
-   
-
     sideDrawer.classList.toggle('open')
     if(sideDrawer.classList.contains('open')){
       open.time(0)

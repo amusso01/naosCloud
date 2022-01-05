@@ -479,39 +479,6 @@ add_action( 'login_enqueue_scripts', 'we_login_logo' );
 
 
 
-// Redirect users who arent logged in...
-function members_only() {
-    global $pagenow;
-    // Check to see if user in not logged in and not on the login page
-    if( !is_user_logged_in() && $pagenow != 'wp-login.php' )
-          auth_redirect();
-}
-add_action( 'wp', 'members_only' ); 
-
-
-// REDIRECT USER AFTEER LOGIN
-
-function custom_login_redirect( $redirect_to, $request, $user ) {
-  if ( isset( $user->roles ) && is_array( $user->roles ) ) {
-    if ( in_array( 'administrator', $user->roles ) || in_array( 'editor', $user->roles ) || in_array( 'author', $user->roles ) ) {
-      $redirect_to = home_url('/');
-    } else {
-      $redirect_to = home_url('/');
-    }
-  }
-  return $redirect_to;
-  }
-  add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
-
-
-// HIDE WORDPRESS BAR
-add_action('after_setup_theme', 'remove_admin_bar');
-function remove_admin_bar() {
-  if (!is_super_admin()) {
-    show_admin_bar(false);
-  }
-}
-
 // ADD div HELP to login page
 	
 add_filter("login_footer","add_login_div_name");
@@ -562,3 +529,75 @@ function change_lost_your_password ($text) {
          return $text;
   }
 add_filter( 'gettext', 'change_lost_your_password' );
+
+
+
+// Function to change "posts" to "Events" in the admin side menu
+function change_post_menu_label() {
+  global $menu;
+  global $submenu;
+  $menu[5][0] = 'Events';
+  $submenu['edit.php'][5][0] = 'Events';
+  $submenu['edit.php'][10][0] = 'Add Event';
+  $submenu['edit.php'][16][0] = 'Tags';
+  echo '';
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
+// Function to change post object labels to "Events"
+function change_post_object_label() {
+  global $wp_post_types;
+  $labels = &$wp_post_types['post']->labels;
+  $labels->name = 'Events';
+  $labels->singular_name = 'Event';
+  $labels->add_new = 'Add Event';
+  $labels->add_new_item = 'Add Event';
+  $labels->edit_item = 'Edit Event';
+  $labels->new_item = 'Event';
+  $labels->view_item = 'View Event';
+  $labels->search_items = 'Search Events';
+  $labels->not_found = 'No Events found';
+  $labels->not_found_in_trash = 'No Events found in Trash';
+}
+add_action( 'init', 'change_post_object_label' );
+
+// Removes Comments from admin menu
+add_action( 'admin_menu', 'my_remove_admin_menus' );
+function my_remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+// Removes Comments from post and pages
+add_action('init', 'remove_comment_support', 100);
+
+function remove_comment_support() {
+    remove_post_type_support( 'post', 'comments' );
+    remove_post_type_support( 'page', 'comments' );
+}
+// Removes Comments from admin bar
+function mytheme_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
+
+// ADD .ZIP to MEDIA LIBRARY
+function modify_upload_mimes ( $mimes_types ) {
+  // add your extension to the mimes array as below
+  $mimes_types['zip'] = 'application/zip';
+  $mimes_types['gz'] = 'application/x-gzip';
+  return $mimes_types;
+}
+add_filter( 'upload_mimes', 'modify_upload_mimes', 99 );
+
+function add_allow_upload_extension_exception( $types, $file, $filename, $mimes ) {
+  // Do basic extension validation and MIME mapping
+  $wp_filetype = wp_check_filetype( $filename, $mimes );
+  $ext         = $wp_filetype['ext'];
+  $type        = $wp_filetype['type'];
+  if( in_array( $ext, array( 'zip', 'gz' ) ) ) { // it allows zip files
+      $types['ext'] = $ext;
+      $types['type'] = $type;
+  }
+  return $types;
+}
+add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );

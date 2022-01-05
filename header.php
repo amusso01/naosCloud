@@ -39,7 +39,7 @@ $displaySocial = get_theme_mod('display-social');
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'foundry' ); ?></a>
 	<header class="site-header">
-		<div class="site-header__inner content-block">
+		<div class="site-header__inner">
 			<?php get_template_part( 'components/header/logo' ); ?>
 
 			<?php get_template_part( 'components/header/search-header' ); ?>

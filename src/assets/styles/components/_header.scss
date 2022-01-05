@@ -6,16 +6,24 @@
   left: 0;
   width: 100vw;
   z-index: 8;
+ 
 	&__inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
     min-height: 60px;
+    padding: 0 22px;
 	}
 	&__item {
 		flex-grow: 1;
 	}
 	&__logo {
-		max-width: 250px;
+		max-width: 268px;
+    display: flex;
+    align-items: center;
+    svg{
+      width: 268px;
+      display: block;
+    }
 	}
 }

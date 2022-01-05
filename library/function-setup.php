@@ -50,8 +50,10 @@ $GTM_id = '';
 // => https://codex.wordpress.org/Function_Reference/register_nav_menus
 function wpseed_register_theme_menus() {
   register_nav_menus([
-    'mainmenu' => __('Main menu'),
-    'footermenu' => __('Footer menu')
+    'home' => __('Home menu'),
+    'institut' => __('Institut Esthederm menu'),
+    'etat' => __('Etat Pur menu'),
+    'bioderma' => __('Bioderma menu')
   ]);
 }
 add_action( 'init', 'wpseed_register_theme_menus');

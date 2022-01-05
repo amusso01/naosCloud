@@ -129,8 +129,42 @@ function is_login_page() {
   /––––––––––––––––––––––––––––––––––––*/
   // redirect all users that are not logged-in to login
   // remove `false && ` to activate
-  if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login_page()){
-    wp_redirect('/admin'); die();
+  // if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login_page()){
+  //   wp_redirect('/admin'); die();
+  // }
+
+
+
+
+// Redirect users who arent logged in...
+function members_only() {
+  global $pagenow;
+  // Check to see if user in not logged in and not on the login page
+  if( !is_user_logged_in() && $pagenow != 'wp-login.php' && $pagenow != 'wp-activate.php' )
+        auth_redirect();
+}
+add_action( 'wp', 'members_only' ); 
+
+
+// REDIRECT USER AFTEER LOGIN
+
+function custom_login_redirect( $redirect_to, $request, $user ) {
+if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+  if ( in_array( 'administrator', $user->roles ) || in_array( 'editor', $user->roles ) || in_array( 'author', $user->roles ) ) {
+    $redirect_to = home_url('/');
+  } else {
+    $redirect_to = home_url('/');
   }
+}
+return $redirect_to;
+}
+add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
 
 
+// HIDE WORDPRESS BAR
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+// if (!is_super_admin()) {
+  show_admin_bar(false);
+// }
+}
