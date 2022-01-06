@@ -1,0 +1,119 @@
+.single-main{
+  background-color: #FAFAFA;
+}
+.single-content{
+  padding-bottom: 42px;
+  padding-top: 44px;
+  min-height: 100%;
+}
+
+.single-content__navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 22px;
+  .back-link, .download-link{
+    color: $color__main;
+    font-size: 14px;
+    font-weight: 600;
+    span{
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+  .back-link{
+    svg{
+      transform: rotate(90deg);
+    }
+  }
+  .download-link{
+    padding: 6px 8px;
+    background-color: $color__bright;
+    border-radius: 3px;
+    border: 2px solid #E8E8E8;
+    transition: .3s;
+    &:hover{
+      background-color: $color__main;
+      color: $color__bright;
+      border-color: $color__main;
+      svg{
+        path{
+          stroke:$color__bright
+        }
+      }
+    }
+  }
+}
+
+.single-content__main{
+  display: flex;
+  column-gap: 50px;
+
+  .single-content__img-container{
+    position: relative;
+    height: 450px;
+    width: 80%;
+    >img{
+      @extend %cover;
+
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  .single-content__info{
+    >h1{
+      color: $color__balck;
+      margin-bottom: 15px;
+    }
+    ul{
+      list-style-position: inside;
+      list-style: none;
+      li{
+        margin-bottom: 18px;
+        &::before{
+          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          color: $color__accent; /* Change the color */
+          font-weight: bold; /* If you want it to be bold */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          width: 1.3rem; /* Also needed for space (tweak if needed) */
+          margin-left: -1em; /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
+    .download-editor{
+     padding-bottom: 40px;
+      border-bottom: 2px solid #D1D1D1;
+    }
+    .download-info{
+      margin-top: 40px;
+      display: flex;
+      p,a,li{
+        font-size: 1.3rem;
+      }
+      ul{
+        li{
+          font-weight: 600;
+        }
+        &:first-of-type{
+          margin-right: 20px;
+          li{
+            color: $color__main;
+          }
+        }
+        .products-item{
+          >span{
+            display: inline-block;
+            margin-right: 5px;
+            padding: 2px 7px;
+            background-color: #E8E8E8;
+            color: $color__main;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+  
+}

@@ -67,3 +67,33 @@ $gFontUrl = "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600
 $fontFamily = "'Quicksand', sans-serif";
 $customLogo = get_stylesheet_directory_uri()."/dist/images/foundry-logo.svg";
 $mainColor = "#00455E";
+
+
+/*==================================================================================
+  6.0 SETUP ACF OPTION PAGE
+==================================================================================*/
+
+if( function_exists('acf_add_options_page') ) {
+
+  // acf_add_options_page();
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+	));
+	
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Header Settings',
+	// 	'menu_title'	=> '',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+	
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Footer Settings',
+	// 	'menu_title'	=> 'Footer',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+	
+}

@@ -10,25 +10,42 @@
 get_header();
 ?>
 
-	<div id="primary" class="container content-area">
-		<div class="row">
-			<main id="main" class="site-main sidebar">
+<div class="site-container">
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
+<?php get_template_part( 'components/page/side-nav' ); ?>
 
-				get_template_part( 'template-parts/content', get_post_type() );
+<main class="main single-main"  role="main">
 
+  <section class="site-hero">
+    
+    <?php get_template_part( 'components/hero/hero-tax' ); ?>
 
-			endwhile; // End of the loop.
-			?>
-
-			</main><!-- #main -->
+  </section>
 
 
-		</div>
-	</div><!-- #primary -->
+  <section class="single-content content-block">
+
+    <?php if ( have_posts() ) : ?>
+
+      <?php while ( have_posts() ) : the_post(); // @codingStandardsIgnoreLine ?>
+
+       <?php get_template_part( 'components/page/single' ); ?>
+
+      <?php endwhile; ?>
+
+    <?php else :?>
+
+      <?php get_template_part( 'template-parts/content', 'none' );?>
+
+    <?php endif; ?>
+    
+  </section>
+
+</main>
+
+
+
+</div>
 
 <?php
 get_footer();

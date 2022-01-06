@@ -19,7 +19,7 @@ $isEtat = false;
 
 <?php if (is_front_page()) : ?>
   <?php $isHome = true; ?>
-<?php elseif(is_page('44') || is_page('bioderma-home') || is_tax('bioderma_categories')) : ?>
+<?php elseif(is_page('44') || is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma' )) : ?>
   <?php $isBio = true; ?>
 
 <?php endif; ?>
@@ -45,7 +45,7 @@ $isEtat = false;
 
 <?php if (is_front_page()) : ?>
   <?php get_template_part( 'components/navigation/home-sub' ); ?>
-<?php elseif(is_page('44') || is_page('bioderma-home') || is_tax('bioderma_categories')) : ?>
+<?php elseif(is_page('44') || is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma' )) : ?>
   <?php get_template_part( 'components/navigation/bio-sub' ); ?>
 
 <?php endif; ?>

@@ -11,13 +11,6 @@
 
 <!-- SUBNAVIGATION -->
 <aside id="mainNavSub" class="main-subNav">
-  <!-- <nav class="main-subNav__nav">
-    <ul>
-      <li><a href="">Homepage</a></li>
-      <li><a href="">Corporate</a></li>
-      <li><a href="">NAOS talks</a></li>
-    </ul>
-  </nav> -->
 
   <?php 
   if ( has_nav_menu( 'home' ) ) :
