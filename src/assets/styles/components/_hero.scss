@@ -1,0 +1,20 @@
+// TAXONOMY HERO
+.tax-hero{
+  &__bg-image{
+    min-height: 183px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+  }
+  &__title{
+    h1{
+      color: $color__balck;
+      margin-bottom: 7px;
+    }
+    .description{
+      font-size: 1.3rem;
+      color: $color__dark;
+    }
+  }
+}

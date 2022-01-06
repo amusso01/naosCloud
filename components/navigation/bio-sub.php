@@ -26,7 +26,7 @@
         'menu_id'           => 'menu_bio',
         'container'         => 'nav',
         'container_class'   => 'main-subNav__nav',
-        'depth'             => 1
+        'depth'             => 2
     ]);
 endif;
 

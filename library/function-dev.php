@@ -125,13 +125,13 @@ function is_login_page() {
   }
   
   
-  /* 3.2 RESTRICT ACCES IF NOT LOGGEDIN
-  /––––––––––––––––––––––––––––––––––––*/
-  // redirect all users that are not logged-in to login
-  // remove `false && ` to activate
-  // if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login_page()){
-  //   wp_redirect('/admin'); die();
-  // }
+/* 3.2 RESTRICT ACCES IF NOT LOGGEDIN
+/––––––––––––––––––––––––––––––––––––*/
+// redirect all users that are not logged-in to login
+// remove `false && ` to activate
+// if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login_page()){
+//   wp_redirect('/admin'); die();
+// }
 
 
 

@@ -15,26 +15,37 @@
 get_header();
 ?>
 
-<main role="main" class="site-main page-main">
-<?php
+<div class="site-container">
 
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
+<?php get_template_part( 'components/page/side-nav' ); ?>
 
-		get_template_part( 'template-parts/content', 'page' );
+<main class="main page-main" role="main">
+
+  <section class="site-hero">
+    
+    <?php get_template_part( 'components/front/hero' ); ?>
+
+  </section>
+
+  <?php if ( have_posts() ) : ?>
+
+    <?php while ( have_posts() ) : the_post(); // @codingStandardsIgnoreLine ?>
+
+      <?php get_template_part( 'template-parts/content', 'page' ) ?>
+
+    <?php endwhile; ?>
+
+  <?php else :?>
+
+    <?php get_template_part( 'template-parts/content', 'none' );?>
+
+  <?php endif; ?>
+
+</main>
 
 
-	endwhile; // End of the loop.
 
-else :
-
-	get_template_part( 'template-parts/content', 'none' );
-
-endif;
-?>
-
-</main><!-- #main -->
+</div>
 
 
 <?php
