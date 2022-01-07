@@ -1,0 +1,157 @@
+// ==========================================================================
+//
+// ACCORDION
+//
+// Description: Base accordion styles that are ESSENTIAL for the accordion
+//
+// ==========================================================================
+
+// ==========================================================================
+// # BASE
+// ==========================================================================
+
+// .badger-accordion {}
+
+.badger-accordion__panel {
+  max-height: 75vh;
+  overflow: hidden;
+
+  // scss-lint:disable ImportantRule
+  &.-ba-is-hidden {
+    max-height: 0 !important;
+    visibility: hidden;
+  }
+
+  // transition is added via `badger-accordion--initalised` to stop animation on initalition
+  .badger-accordion--initalised & {
+    transition: max-height ease-in-out 0.2s;
+  }
+}
+
+// UNITS
+$spacing-unit: 40px;
+$half-spacing-unit: $spacing-unit / 2;
+// ANIMATION
+$transition-time: 0.2s;
+@mixin base-trans {
+  transition: all ease-in-out $transition-time;
+}
+
+// ==========================================================================
+// # DEMO ACCORDION
+// ==========================================================================
+
+.badger-accordion {
+  overflow: hidden;
+}
+
+.badger-accordion__trigger {
+  align-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0px;
+  color: $color__dark;
+  display: flex;
+  padding: $half-spacing-unit;
+  text-align: left;
+  transition: all ease-in-out $transition-time;
+  width: 100%;
+  border-top: 1px solid #d2d3d6;
+
+  .badger-accordion__trigger-title {
+    font-size: 21px;
+    font-weight: 600;
+    font-family: $text__fontname;
+    letter-spacing: 0.2px;
+  }
+
+  &[aria-expanded="true"] {
+    border-bottom: none;
+    .badger-accordion__trigger-icon {
+      &:before {
+        transform: rotate(45deg) translate3d(13px, 14px, 0);
+      }
+
+      &:after {
+        transform: rotate(-45deg) translate3d(-13px, 14px, 0);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #e3e5eb;
+    cursor: pointer;
+    outline: none;
+  }
+
+  // Removing "inner outline" for Firefox
+  &::-moz-focus-inner {
+    border: none;
+  }
+}
+
+.badger-accordion__header:last-of-type {
+  .badger-accordion__trigger {
+    border-bottom: 1px solid #d2d3d6;
+  }
+}
+
+.badger-accordion__trigger-title {
+  transition: ease-in-out 0.3s;
+}
+
+.badger-accordion__trigger-icon {
+  display: block;
+  height: $spacing-unit;
+  margin-left: auto;
+  position: relative;
+  transition: all ease-in-out $transition-time;
+  width: $spacing-unit;
+
+  &:after,
+  &:before {
+    background-color: $color__main;
+    content: "";
+    height: 3px;
+    position: absolute;
+    top: 10px;
+    transition: all ease-in-out (($transition-time / 3) * 2);
+    width: 30px;
+  }
+
+  &:before {
+    left: 1px;
+    transform: rotate(45deg) translate3d(8px, 22px, 0);
+    transform-origin: 100%;
+  }
+
+  &:after {
+    transform: rotate(-45deg) translate3d(-8px, 22px, 0);
+    right: 1px;
+    transform-origin: 0;
+  }
+}
+
+.badger-accordion__panel {
+  background-color: transparent;
+  position: relative;
+  padding-left: $half-spacing-unit;
+  padding-right: $half-spacing-unit;
+  &.-ba-is-active {
+    margin-bottom: 30px;
+  }
+  p {
+    color: #4c556a;
+  }
+  ul {
+    list-style-position: inside;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .badger-accordion__trigger-icon {
+    display: none;
+    padding: $half-spacing-unit;
+  }
+}

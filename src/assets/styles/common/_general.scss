@@ -17,6 +17,7 @@ html {
 }
 body{
 	font-size: $text__p;
+  background-color: #FAFAFA;
 }
 /**
  * Generic Typography
@@ -89,6 +90,7 @@ h6 {
 	margin: 0px;
 	font-family: $header__fontname;
   font-weight: 600;
+  color: $color__balck;
 }
 
 h1,

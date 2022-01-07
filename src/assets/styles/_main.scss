@@ -9,6 +9,7 @@
 @import "common/helper";
 
 // Components
+@import "components/badgerAccordionStyle.scss";
 @import "components/hamburger";
 @import "components/header";
 @import "components/search-form";
@@ -18,7 +19,9 @@
 @import "components/footer";
 @import "components/hero";
 
+
 // Templates
 @import "templates/asset-grid";
 @import "templates/home";
 @import "templates/single";
+@import "templates/page";

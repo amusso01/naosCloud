@@ -7,14 +7,13 @@
  * @package foundry
  **/
 
+?>
 
-if ( has_post_thumbnail() ) : ?>
-	<section class="section hero">
-		<img class="img-fluid hero-image">
-			<?php the_post_thumbnail (); ?>
-		</img>
-		<div class="hero-content">
-		
-		</div>
-	</section>
-<?php endif; ?>
+
+<section class="tax-hero">
+<div class="tax-hero__bg-image content-block" style="background-image:url(<?php echo  get_the_post_thumbnail_url() ?>)">
+<div class="tax-hero__title">
+   <h1><?php echo get_the_title() ?></h1>
+ </div>
+</div>
+</section>

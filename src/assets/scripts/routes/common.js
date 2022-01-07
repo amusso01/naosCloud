@@ -4,6 +4,7 @@ import hamburger from "./../part/hamburger";
 import { sideNav } from "../part/sideNav";
 import { dropdown } from "../part/dropdown";
 import search from "../part/search";
+import accordion from "../part/accordion"
 
 export default {
 	init() {
@@ -25,6 +26,13 @@ export default {
 
     // SEARCH BAR ASC DESC
     search()
+
+    //  ACCORDION
+		const accordionDiv = document.getElementById('js-badger-accordion')
+		if (typeof(accordionDiv) != 'undefined' && accordionDiv != null)
+		 {
+			 accordion();
+		 }
 
 
     
