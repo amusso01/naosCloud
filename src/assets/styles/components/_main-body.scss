@@ -1,8 +1,14 @@
 #content{
   position: relative;
   top: 60px;
-  left: calc(7.5rem + 24rem);
-  width: calc(100vw - 7.5rem - 24rem);
+  left: calc(7.5rem + 22rem);
+  width: calc(100vw - 7.5rem - 22rem);
+  transition: width .4s , left .4s;
+  transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+  &.wide{
+    left: calc(7.5rem + 1.7rem);
+    width: calc(100vw - 7.5rem );
+  }
 }
 
 
@@ -20,7 +26,7 @@
     z-index: 5;
   }
   .main-subNav{
-    width: 24rem;
+    width: 22rem;
     min-height: calc(100vh - 60px);
     z-index: 1;
     position: fixed;

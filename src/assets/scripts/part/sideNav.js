@@ -5,29 +5,31 @@ export function sideNav(){
   const sideSubNav = document.querySelector('.main-subNav__nav')
   const sideFooter = document.querySelector('.main-subNav__footer')
   const sideDrawer = document.getElementById('mainNavSub')
+  const content = document.getElementById('content')
   // GSAP TIMELINE
   const open =  show([sideSubNav, sideFooter])
   const close = hide([sideSubNav, sideFooter])
 
   sideIcon.addEventListener('click', ()=>{ 
 
-    sideDrawer.classList.toggle('open')
-    if(sideDrawer.classList.contains('open')){
-      open.time(0)
-      open.play()
-    }else{
+    sideDrawer.classList.toggle('close')
+    content.classList.toggle('wide')
+    if(sideDrawer.classList.contains('close')){
       if(open.isActive()){
         open.progress(1)
       }
       close.time(0)
       close.play()
+    }else{
+      open.time(0)
+      open.play()
     }
   })
 }
 
 // GSAP SHOW AND HIDE FUNCTION
 function show(elements){
-  let tl = gsap.timeline({paused: true});
+  let tl = gsap.timeline({paused: true})
   tl.to(elements, {
     display: 'block',
     opacity: 1,
@@ -37,7 +39,7 @@ function show(elements){
   return tl;
 }
 function hide(elements){
-  const tl = gsap.timeline({paused: true});
+  const tl = gsap.timeline({paused: true})
   tl.to([elements], {
     display: 'none',
     opacity: 0,

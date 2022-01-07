@@ -168,3 +168,37 @@ function remove_admin_bar() {
   show_admin_bar(false);
 // }
 }
+
+
+/**
+ * Check if post is in a menu
+ *
+ * @param $menu menu name, id, or slug
+ * @param $object_id int post object id of page
+ * @return bool true if object is in menu
+ */
+function cms_is_in_menu( $menu = null, $object_id = null ) {
+
+  // get menu object
+  $menu_object = wp_get_nav_menu_items( esc_attr( $menu ) );
+ 
+
+  // stop if there isn't a menu
+  if( ! $menu_object ){
+    return false;
+  }
+
+  // get the object_id field out of the menu object
+  $menu_items = wp_list_pluck( $menu_object, 'object_id' );
+
+
+  // use the current post if object_id is not specified
+  if( !$object_id ) {
+      global $post;
+      $object_id = get_queried_object_id();
+  }
+
+  // test if the specified page is in the menu or not. return true or false.
+  return in_array( (int) $object_id, $menu_items );
+
+}
