@@ -45,7 +45,7 @@
 // GRID SECTION
 .asset-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 26rem));
   column-gap: 18px;
   row-gap: 21px;
   justify-items: center;
