@@ -1,0 +1,25 @@
+.post-event{
+  background-color: $color__bright;
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  column-gap: 5.5rem;
+  padding:  15px 20px;
+  border-radius: 5px;
+  margin-bottom: 2.4rem;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  .start-end{
+    padding-right: 2rem;
+    >p{
+      color: $color__accent;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  }
+  .event-info{
+    h4{
+      margin-bottom: 5px;
+    }
+  }
+}

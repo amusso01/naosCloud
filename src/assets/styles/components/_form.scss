@@ -1,0 +1,34 @@
+.forminator-field{
+  >label{
+    display: none;
+  }
+  >input, textarea{
+    width: 100%;
+    background-color: $color__bright;
+    border: 2px solid #E8E8E8;
+    border-radius: 5px;
+    padding: 10px 15px ;
+    &:focus, &:active, &:focus-visible{
+      border-color: $color__main!important;
+      outline: $color__main!important;
+    }
+  }
+  .forminator-description{
+    font-size: 1.3rem;
+  }
+  .forminator-button-submit{
+    float: right;
+    border-radius: 3px;
+    background-color: $color__main;
+    color: $color__bright;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 9px 60px;
+    border: none;
+    &:hover{
+      color: $color__main;
+      background-color: $color__accent;
+      cursor: pointer;
+    }
+  }
+}

@@ -73,3 +73,4 @@ LOAD CUSTOM ACF-GUTENBERG-BLOCKS
 ==================================================================================*/
 
 require get_template_directory().'/template-parts/blocks/block-accordion.php';
+require get_template_directory().'/template-parts/blocks/block-events.php';
