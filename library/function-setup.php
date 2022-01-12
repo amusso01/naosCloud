@@ -53,7 +53,8 @@ function wpseed_register_theme_menus() {
     'home' => __('Home menu'),
     'institut' => __('Institut Esthederm menu'),
     'etat' => __('Etat Pur menu'),
-    'bioderma' => __('Bioderma menu')
+    'bioderma' => __('Bioderma menu'),
+    'user' => __('User menu')
   ]);
 }
 add_action( 'init', 'wpseed_register_theme_menus');

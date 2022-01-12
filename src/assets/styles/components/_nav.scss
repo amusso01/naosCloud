@@ -60,6 +60,13 @@
             }
           }
         }
+        .active{
+          svg{
+            path{
+              stroke: $color__accent;
+            }
+          }
+        }
       }
       &:last-of-type{
         margin-top: 20px;
@@ -78,6 +85,14 @@
         }
         &:hover{
           border-color: $color__accent;
+        }
+        .active{
+          svg{
+            path, circle{
+              stroke: $color__accent;
+              fill: $color__accent;
+            }
+          }
         }
       }
       &:hover{

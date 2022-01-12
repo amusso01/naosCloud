@@ -11,10 +11,13 @@
 ?>
 
 <?php 
-// Social logic
+// Add full width class for page without side nav
+$isFull = false;
 
-$displaySocial = get_theme_mod('display-social');
 
+if(is_page_template('template-my-account.php') || is_page_template('template-full-width.php')){
+  $isFull = true;
+}
 ?>
 
 
@@ -49,4 +52,4 @@ $displaySocial = get_theme_mod('display-social');
 	</header><!-- .site-header -->
 
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content <?php echo $isFull ? 'is-full' : '' ?>">

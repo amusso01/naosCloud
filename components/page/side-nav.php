@@ -15,6 +15,8 @@ $isHome = false;
 $isBio = false;
 $isInsti = false;
 $isEtat = false;
+$isHelp = false;
+$isAccount= false;
 
 // Tefunction return true if current page id is in certain menu
 $isInBioMenu = cms_is_in_menu('bioderma');
@@ -25,6 +27,12 @@ $isInBioMenu = cms_is_in_menu('bioderma');
   <?php $isHome = true; ?>
 <?php elseif(is_page('44') || is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma') || $isInBioMenu) : ?>
   <?php $isBio = true; ?>
+
+
+<?php elseif(is_page('154') || is_page('help') ) : ?>
+  <?php $isHelp = true; ?>
+<?php elseif(is_page('152') || is_page('my-account') ) : ?>
+  <?php $isAccount = true; ?>
 
 <?php endif; ?>
 
@@ -40,9 +48,10 @@ $isInBioMenu = cms_is_in_menu('bioderma');
     </nav>
   </div>
   <div class="bottomNav">
+    <!-- SUBSTITUTE THIE USER MENU WITH USER-NAV.php WHEN OTHER LANGUAGES SITE ARE IN PLACE -->
     <ul>
-      <li title="Help" > <span class='no-show' >Help</span> <?php get_template_part( 'svg-template/svg', 'icon_help' ) ?></li>
-      <li title="My Account" > <span class='no-show' >My Account</span> <?php get_template_part( 'svg-template/svg', 'icon_user' ) ?></li>
+      <li title="Help" > <span class='no-show' >Help</span><a title="Help" class="<?php echo $isHelp ? 'active' : '' ?>" href="<?php echo site_url('/help')  ?>"> <?php get_template_part( 'svg-template/svg', 'icon_help' ) ?></a></li>
+      <li title="My Account" > <span class='no-show' >My Account</span> <a title="My Account" class="<?php echo $isAccount ? 'active' : '' ?>" href="<?php echo site_url('/my-account')  ?>"><?php get_template_part( 'svg-template/svg', 'icon_user' ) ?></a></li>
     </ul>
   </div>
 </aside>
