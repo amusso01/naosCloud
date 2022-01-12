@@ -14,27 +14,22 @@ get_header();
 
   <?php get_template_part( 'components/page/side-nav' ); ?>
 
-  <main class="main homepage-main" role="main">
+  <main class="main front-main" role="main">
 
-    <section class="site-hero">
+    <section class="front-hero">
       
       <?php get_template_part( 'components/front/hero' ); ?>
 
     </section>
 
-    <?php if ( have_posts() ) : ?>
-
-      <?php while ( have_posts() ) : the_post(); // @codingStandardsIgnoreLine ?>
-
-        <?php get_template_part( 'template-parts/content', 'front' ) ?>
-
-      <?php endwhile; ?>
-
-    <?php else :?>
-
-      <?php get_template_part( 'template-parts/content', 'none' );?>
-
-    <?php endif; ?>
+    <section class="front-content">
+      <div class="front-content__main">
+        <?php get_template_part( 'components/front/content' ); ?>
+      </div>
+      <div class="front-content__sidebar">
+        <?php get_template_part( 'components/front/sidebar' ); ?>
+      </div>
+    </section>
 
   </main>
 

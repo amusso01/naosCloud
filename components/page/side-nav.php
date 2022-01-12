@@ -10,7 +10,7 @@
 
 <?php 
 
-
+// Page Variables
 $isHome = false;
 $isBio = false;
 $isInsti = false;
@@ -18,12 +18,20 @@ $isEtat = false;
 $isHelp = false;
 $isAccount= false;
 
-// Tefunction return true if current page id is in certain menu
+// The function return true if current page id is in certain menu
 $isInBioMenu = cms_is_in_menu('bioderma');
+
+// Retrive user menu link. N.B. in this menu there must be only the help and my account page in this order
+$userMenu = wp_get_nav_menu_items( 'user' );
+$helpLink = $userMenu[0]->url;
+$accountLink = $userMenu[1]->url;
+
 
 ?>
 
-<?php if (is_front_page()) : ?>
+<?php 
+// Check in which page we are and update variables accordingly
+  if (is_front_page()) : ?>
   <?php $isHome = true; ?>
 <?php elseif(is_page('44') || is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma') || $isInBioMenu) : ?>
   <?php $isBio = true; ?>
@@ -48,10 +56,9 @@ $isInBioMenu = cms_is_in_menu('bioderma');
     </nav>
   </div>
   <div class="bottomNav">
-    <!-- SUBSTITUTE THIE USER MENU WITH USER-NAV.php WHEN OTHER LANGUAGES SITE ARE IN PLACE -->
     <ul>
-      <li title="Help" > <span class='no-show' >Help</span><a title="Help" class="<?php echo $isHelp ? 'active' : '' ?>" href="<?php echo site_url('/help')  ?>"> <?php get_template_part( 'svg-template/svg', 'icon_help' ) ?></a></li>
-      <li title="My Account" > <span class='no-show' >My Account</span> <a title="My Account" class="<?php echo $isAccount ? 'active' : '' ?>" href="<?php echo site_url('/my-account')  ?>"><?php get_template_part( 'svg-template/svg', 'icon_user' ) ?></a></li>
+      <li title="Help" > <span class='no-show' >Help</span><a title="Help" class="<?php echo $isHelp ? 'active' : '' ?>" href="<?php echo $helpLink  ?>"> <?php get_template_part( 'svg-template/svg', 'icon_help' ) ?></a></li>
+      <li title="My Account" > <span class='no-show' >My Account</span> <a title="My Account" class="<?php echo $isAccount ? 'active' : '' ?>" href="<?php echo $accountLink ?>"><?php get_template_part( 'svg-template/svg', 'icon_user' ) ?></a></li>
     </ul>
   </div>
 </aside>

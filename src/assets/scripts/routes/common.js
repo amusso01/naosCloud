@@ -20,7 +20,11 @@ export default {
 		hamburger()
 
     // SIDE NAVIGATION
-    sideNav()
+    const sideEl = document.getElementById('mainNavSub')
+    if (typeof(sideEl) != 'undefined' && sideEl != null){
+      sideNav()
+    }
+    
     // DROPDOWN MENU
     dropdown()
 

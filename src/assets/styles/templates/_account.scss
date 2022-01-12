@@ -1,0 +1,54 @@
+// HERO 
+.account-hero{
+  margin-bottom: 50px;
+  &__bg-image{
+    width: 100%;
+  }
+  &__info{
+    display: flex;
+  }
+  .svg{
+    margin-right: 44px;
+    width: 12.4rem;
+    height: 12.4rem;
+    background-color: $color__bright;
+    border: 3px solid #C7D5D5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      width: 5rem;
+      height: 6rem;
+      path, circle{
+        stroke: $color__main
+      }
+    }
+  }
+  .name{
+    align-self: flex-end;
+    margin-bottom: 30px;
+  }
+}
+// CONTENT PAGE
+.user-main-info{
+  display: flex;
+  column-gap: 20rem;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    p{
+      &:first-of-type{
+        font-size: 1.6rem;
+        margin-bottom: 13px;
+        font-weight: 600;
+        color: #6D7780;
+      }
+      &:last-of-type{
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #072939;
+      }
+    }
+  }
+}

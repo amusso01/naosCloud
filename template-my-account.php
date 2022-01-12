@@ -19,7 +19,7 @@ get_header();
 
   <main class="main myAccount-main" role="main">
 
-    <section class="site-hero">
+    <section class="account-hero">
       
       <?php get_template_part( 'components/page/hero-account' ); ?>
 

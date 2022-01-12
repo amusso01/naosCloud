@@ -17,27 +17,18 @@ get_header();
 
 <?php get_template_part( 'components/page/side-nav' ); ?>
 
-<main class="main full-width-main" role="main">
+<main class="main full-width__main" role="main">
 
-  <section class="site-hero">
+  <section class="full-width__hero">
     
-    <?php get_template_part( 'components/front/hero' ); ?>
+    <?php get_template_part( 'components/page/hero' ); ?>
 
   </section>
 
-  <?php if ( have_posts() ) : ?>
 
-    <?php while ( have_posts() ) : the_post(); // @codingStandardsIgnoreLine ?>
-
-      <?php get_template_part( 'template-parts/content', 'page' ) ?>
-
-    <?php endwhile; ?>
-
-  <?php else :?>
-
-    <?php get_template_part( 'template-parts/content', 'none' );?>
-
-  <?php endif; ?>
+  <section class="full-width__content content-block">
+    <?php get_template_part( 'components/page/content' ); ?>
+  </section>
 
 </main>
 

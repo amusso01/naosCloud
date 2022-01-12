@@ -6,8 +6,11 @@ html {
 	font-family: $text__fontname;
 	// Make everything look a little nicer in webkit
 	-webkit-font-smoothing: antialiased;
-	font-size: calc(100vw / 1366 * 10) ;
+	font-size: calc(100vw / 1490 * 10) ;
 	font-weight: 400;
+  @include media('<desktop'){
+    font-size: calc(100vw / 1366 * 10) ;
+  }
   @include media('<tablet'){
     font-size: calc(100vw / 820 * 10) ;
   }
