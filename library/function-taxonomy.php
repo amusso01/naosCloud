@@ -210,6 +210,81 @@ function cptui_register_my_cpts() {
 
 add_action( 'init', 'cptui_register_my_cpts' );
 
+function cptui_register_my_cpts_how_to_video() {
+
+	/**
+	 * Post Type: How to video.
+	 */
+
+	$labels = [
+		"name" => __( "How to video", "custom-post-type-ui" ),
+		"singular_name" => __( "How to video", "custom-post-type-ui" ),
+		"menu_name" => __( "How to video", "custom-post-type-ui" ),
+		"all_items" => __( "All How to video", "custom-post-type-ui" ),
+		"add_new" => __( "Add new", "custom-post-type-ui" ),
+		"add_new_item" => __( "Add new How to video", "custom-post-type-ui" ),
+		"edit_item" => __( "Edit How to video", "custom-post-type-ui" ),
+		"new_item" => __( "New How to video", "custom-post-type-ui" ),
+		"view_item" => __( "View How to video", "custom-post-type-ui" ),
+		"view_items" => __( "View How to video", "custom-post-type-ui" ),
+		"search_items" => __( "Search How to video", "custom-post-type-ui" ),
+		"not_found" => __( "No How to video found", "custom-post-type-ui" ),
+		"not_found_in_trash" => __( "No How to video found in trash", "custom-post-type-ui" ),
+		"parent" => __( "Parent How to video:", "custom-post-type-ui" ),
+		"featured_image" => __( "Featured image for this How to video", "custom-post-type-ui" ),
+		"set_featured_image" => __( "Set featured image for this How to video", "custom-post-type-ui" ),
+		"remove_featured_image" => __( "Remove featured image for this How to video", "custom-post-type-ui" ),
+		"use_featured_image" => __( "Use as featured image for this How to video", "custom-post-type-ui" ),
+		"archives" => __( "How to video archives", "custom-post-type-ui" ),
+		"insert_into_item" => __( "Insert into How to video", "custom-post-type-ui" ),
+		"uploaded_to_this_item" => __( "Upload to this How to video", "custom-post-type-ui" ),
+		"filter_items_list" => __( "Filter How to video list", "custom-post-type-ui" ),
+		"items_list_navigation" => __( "How to video list navigation", "custom-post-type-ui" ),
+		"items_list" => __( "How to video list", "custom-post-type-ui" ),
+		"attributes" => __( "How to video attributes", "custom-post-type-ui" ),
+		"name_admin_bar" => __( "How to video", "custom-post-type-ui" ),
+		"item_published" => __( "How to video published", "custom-post-type-ui" ),
+		"item_published_privately" => __( "How to video published privately.", "custom-post-type-ui" ),
+		"item_reverted_to_draft" => __( "How to video reverted to draft.", "custom-post-type-ui" ),
+		"item_scheduled" => __( "How to video scheduled", "custom-post-type-ui" ),
+		"item_updated" => __( "How to video updated.", "custom-post-type-ui" ),
+		"parent_item_colon" => __( "Parent How to video:", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => __( "How to video", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "how_to_video", "with_front" => true ],
+		"query_var" => true,
+    'menu_icon' => 'dashicons-editor-video',
+		"supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "how_to_video", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_how_to_video' );
+
+
+
+
+
 
 
 function cptui_register_my_taxes() {

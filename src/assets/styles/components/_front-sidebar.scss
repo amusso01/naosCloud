@@ -1,0 +1,40 @@
+.front__events-sidebar{
+  background-color:#D8EEF9;
+  padding: 25px 20px;
+  border-radius: 5px;
+  h2{
+    margin-bottom: 20px;
+  }
+  .front__event{
+    border-bottom: 3px solid $color__main;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    &:last-of-type{
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    &:first-of-type{
+      padding-top: 0;
+    }
+    &:hover{
+      h4{
+        text-decoration: underline;
+      }
+    }
+  }
+  .event-info{
+    h4{
+      color: $color__main;
+      margin-bottom: 10px;
+    }
+  }
+  .start-end{
+    p{
+      font-size: 1.3rem;
+      color: $color__main;
+      margin-bottom: 7px;
+    }
+  
+  }
+}

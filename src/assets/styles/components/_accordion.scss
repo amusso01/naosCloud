@@ -1,0 +1,13 @@
+.badger-accordion__panel-inner{
+  transition: max-height 0.3s;
+  &.-ba-is-active{
+    margin-top: 8px;
+  
+  }
+}
+.badger-accordion__trigger{
+  &.-ba-is-active{
+    background-color: #e3e5eb;
+  
+  }
+}

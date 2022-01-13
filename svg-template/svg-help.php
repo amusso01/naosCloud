@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.7" height="17.7" viewBox="0 0 19.7 17.7"><path data-name="Path 2519" d="M4.85 4.85h10m-10 4h4m1 8l-4-4h-3a2 2 0 01-2-2v-8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3z" fill="none" stroke="#00455e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg>

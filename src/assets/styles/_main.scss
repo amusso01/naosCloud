@@ -1,3 +1,6 @@
+// Required Core Stylesheet
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
 //Custom styles start here
 
 // Common
@@ -21,6 +24,8 @@
 @import "components/events-display";
 @import "components/form";
 @import "components/front-sidebar";
+@import "components/accordion";
+@import "components/carousel";
 
 
 // Templates

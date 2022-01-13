@@ -7,6 +7,12 @@
  * @package Foundry
  */
 
+ // get the current taxonomy term
+$term = get_queried_object();
+
+$image = get_field('navigation_image', 'option');
+$text = get_field('navigation_text', 'option');
+
  ?>
 
 <!-- SUBNAVIGATION -->
@@ -29,8 +35,8 @@ endif;
 
 
   <article class="main-subNav__footer">
-    <img class="lozad" data-src="<?php echo get_stylesheet_directory_uri() ?>/dist/images/desk_image.jpg" alt="Woman Skin">
-    <p><strong>Naos</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit esse molestiae quasi.</p>
+    <img class="lozad" data-src="<?php echo  $image?>" alt="Woman Skin">
+    <p><?php echo $text ?></p>
   </article>
 
   <div class="main-subNav__icon">

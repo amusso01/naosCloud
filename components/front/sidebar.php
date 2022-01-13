@@ -20,7 +20,7 @@
   $the_query = new WP_Query( $args );
 ?>
 
-<sidebar class="front__events-sidebar">
+<aside class="front__events-sidebar">
   <h2>Events</h2>
   <?php
   
@@ -34,13 +34,15 @@
     ?>
   
   <article class="front__event">
-    <div class="start-end">
-      <p><?php echo $startDate ?><?php echo $endDate ? ' - '.$endDate : '' ?></p>
-    </div>
-    <div class="event-info">
-      <h4><?php echo get_the_title() ?></h4>
-      <p class="excerpt"><?php echo get_the_excerpt() ?></p>
-    </div>
+    <a href="<?php the_permalink(  ) ?>">
+      <div class="start-end">
+        <p><?php echo $startDate ?><?php echo $endDate ? ' - '.$endDate : '' ?></p>
+      </div>
+      <div class="event-info">
+        <h4><?php echo get_the_title() ?></h4>
+        <p class="excerpt"><?php echo get_the_excerpt() ?></p>
+      </div>
+    </a>
   </article>  
 
   <?php
@@ -51,4 +53,4 @@
     wp_reset_postdata();
   
   ?>
-</sidebar>
+</aside>
