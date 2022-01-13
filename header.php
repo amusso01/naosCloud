@@ -48,7 +48,7 @@ if(is_page_template('template-my-account.php') || is_page_template('template-ful
 			<?php get_template_part( 'components/header/search-header' ); ?>
 
 		</div>
-		<!-- <?php get_search_form(); ?> -->
+
 	</header><!-- .site-header -->
 
 

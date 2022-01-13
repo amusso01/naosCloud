@@ -33,16 +33,18 @@ $endDate = $dates['end_date'];
 
 ?>
   
-<article class="post-event">
-  <div class="start-end">
-    <p class="start"><?php echo $startDate ?></p>
-    <p class="end"><?php echo $endDate ? '- '.$endDate : '' ?></p>
-  </div>
-  <div class="event-info">
-    <h4><?php echo get_the_title() ?></h4>
-    <p class="excerpt"><?php echo get_the_excerpt() ?></p>
-  </div>
-</article>
+<a class="post-event__link" href="<?php the_permalink() ?>">
+  <article class="post-event">
+    <div class="start-end">
+      <p class="start"><?php echo $startDate ?></p>
+      <p class="end"><?php echo $endDate ? '- '.$endDate : '' ?></p>
+    </div>
+    <div class="event-info">
+      <h4><?php echo get_the_title() ?></h4>
+      <p class="excerpt"><?php echo get_the_excerpt() ?></p>
+    </div>
+  </article>
+</a>
 
 
 <?php

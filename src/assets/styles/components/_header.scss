@@ -26,4 +26,34 @@
       display: block;
     }
 	}
+  // SEARCH BAR TOP
+  #searchform{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 10px;
+    >label{
+      color: $color__main;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .search-field{
+      border: none;
+      border-bottom:2px solid #D1D1D1;
+      width: 260px;
+      &:focus, &:active{
+        outline: none !important;
+        border-color: $color__main;
+      }
+    }
+    #searchSubmit{
+      background-color: transparent;
+      border: none!important;
+      display: flex;
+      &:hover{
+        cursor: pointer;
+      }
+      
+    }
+  }
 }
+

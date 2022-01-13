@@ -5,10 +5,7 @@
   column-gap: 5.5rem;
   padding:  15px 20px;
   border-radius: 5px;
-  margin-bottom: 2.4rem;
-  &:last-of-type{
-    margin-bottom: 0;
-  }
+
   .start-end{
     padding-right: 2rem;
     >p{
@@ -20,6 +17,18 @@
   .event-info{
     h4{
       margin-bottom: 5px;
+    }
+  }
+}
+.post-event__link{
+  margin-bottom: 24px;
+  display: inline-block;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  &:hover{
+    h4{
+      text-decoration: underline;
     }
   }
 }
