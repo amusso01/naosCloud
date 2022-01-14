@@ -10,41 +10,58 @@
 get_header();
 ?>
 
-<main class="main site-search" role="main" >
+<div class="site-container">
 
-	<?php if ( have_posts() ) : ?>
+<?php get_template_part( 'components/page/side-nav' ); ?>
 
-		<header class="page-header">
-			<h1 class="page-title">
-			<?php
-			/* translators: %s: search query. */
-			printf( esc_html__( 'Search Results for: %s', 'foundry' ), '<span>' . get_search_query() . '</span>' );
-			?>
-			</h1>
-		</header><!-- .page-header -->
+<main class="main search__main" role="main">
 
-		<?php
-		/* Start the Loop */
-		while ( have_posts() ) :
-			the_post();
 
-			/**
-			 * Run the loop for the search to output the results.
-			 * If you want to overload this in a child theme then include a file
-			 * called content-search.php and that will be used instead.
-			 */
-			get_template_part( 'template-parts/content', 'search' );
+  
+  
+  <section class="search__content ">
+  <?php if ( have_posts() ) : ?>
 
-		endwhile;
+    <header class="page-header">
+      <h1 class="page-title">
+      <?php
+      /* translators: %s: search query. */
+      printf( esc_html__( 'Search Results for: %s', 'foundry' ), '<span>' . get_search_query() . '</span>' );
+      ?>
+      </h1>
+    </header><!-- .page-header -->
 
-		else :
+    <div class="content-block search-grid">
 
-			get_template_part( 'template-parts/content', 'none' );
+    
+      <?php
+      /* Start the Loop */
+      while ( have_posts() ) :
+        the_post();
 
-		endif;
-		?>
+        /**
+         * Run the loop for the search to output the results.
+         * If you want to overload this in a child theme then include a file
+         * called content-search.php and that will be used instead.
+         */
+        get_template_part( 'template-parts/content', 'search' );
 
-</main><!-- .main -->
+      endwhile;
+
+      else :
+
+        get_template_part( 'template-parts/content', 'none' );
+
+      endif;
+      ?>
+    </div>
+  </section>
+
+</main>
+
+
+
+</div>
 
 <?php
 get_footer();

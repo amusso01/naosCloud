@@ -1,0 +1,27 @@
+.search__content{
+  padding-bottom: 40px;
+  .page-header{
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 44px 50px;
+    border-bottom: 4px solid $color__main;
+    margin-bottom: 44px;
+  }
+  .search-grid{
+    >article{
+      padding: 24px 17px;
+      background-color: $color__bright;
+      border-radius: 5px;
+      margin-bottom: 23px;
+    }
+    .entry-title{
+      >a{
+        font-size: 1.6rem;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

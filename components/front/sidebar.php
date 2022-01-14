@@ -11,11 +11,26 @@
 
 
 <?php 
-  $args = array(
-    'post_type'      => 'post',
-    'post_status'    => 'publish',
-    'posts_per_page' => 3
-  );
+ $args = array(
+  'post_type'      => 'post',
+  'post_status'    => 'publish',
+  'posts_per_page' => 3
+);
+
+  if(is_front_page()){
+    
+  }elseif(is_page('bioderma-home')){
+    $args[ 'category_name'] = 'bioderma-cat';
+  }elseif(is_page('institut-of-esthederm-home')){
+    $args[ 'category_name'] = 'institut_esthederm-cat';
+  }elseif(is_page('etat-pur-home')){
+    $args[ 'category_name'] = 'etat_pur-cat';
+  }
+
+
+
+
+ 
 
   $the_query = new WP_Query( $args );
 ?>

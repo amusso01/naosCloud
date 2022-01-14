@@ -15,7 +15,7 @@
 $isFull = false;
 
 
-if(is_page_template('template-my-account.php') || is_page_template('template-full-width.php')){
+if(is_page_template('template-my-account.php') || is_page_template('template-full-width.php') || is_search()){
   $isFull = true;
 }
 ?>

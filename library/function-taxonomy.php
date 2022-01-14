@@ -1,8 +1,5 @@
 <?php 
 
-		
-
-
 
 function cptui_register_my_cpts() {
 
@@ -134,7 +131,7 @@ function cptui_register_my_cpts() {
 		"query_var" => true,
 		'menu_icon' => 'data:image/svg+xml;base64,' . base64_encode('<svg data-name="brand 2" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path class="rect" data-name="Path 2542" d="M5 0h26a5 5 0 015 5v26a5 5 0 01-5 5H5a5 5 0 01-5-5V5a5 5 0 015-5z" fill="none"/><g data-name="Group 889"><g data-name="Group 888" transform="translate(5.018 5.631)" clip-path="url(#clip-path)"><path data-name="Path 2402" d="M11.167.066a18.636 18.636 0 00-2.7.44C8.209.564 7.344.813 7.04.919a9.148 9.148 0 00-.891.328l-.677.283a3.361 3.361 0 00-.347.165c-.063.037-.206.1-.318.163-.292.137-.369.183-1.107.6a8.364 8.364 0 00-.871.546A14.7 14.7 0 00.463 4.972c-.422.438-.508.557-.444.591a.114.114 0 00.106-.057 2.232 2.232 0 01.275-.23c.118-.09.241-.188.275-.22s.131-.1.216-.165l.309-.223a28.758 28.758 0 011.721-1.052c.467-.251.758-.393 1.3-.632l.371-.163c.073-.033.247-.1.389-.165s.32-.124.4-.163a3.345 3.345 0 01.341-.126l.389-.128c.5-.163.962-.31 1.154-.351.09-.02.265-.063.389-.1a19.01 19.01 0 012.265-.446 25.176 25.176 0 016.337 0c.807.13 1.5.253 1.743.316l.646.163c.22.057.495.126.614.165l.422.128c.4.122.8.255.942.314.079.033.263.1.408.163s.326.128.4.165.243.1.379.163a4.788 4.788 0 01.624.287c.063.033.212.106.328.165s.261.126.318.163l.224.122c.343.181 1.311.771 1.67 1.021l.263.183c.106.075.228.165.265.2s.169.135.287.226a2.294 2.294 0 01.269.232.1.1 0 00.1.039c.075-.037-.09-.236-.73-.875a13.16 13.16 0 00-.726-.656c-.029-.018-.143-.11-.257-.2a13.947 13.947 0 00-1.345-.987l-.359-.224a21.506 21.506 0 00-.942-.546c-.13-.073-.451-.236-.614-.312a31.423 31.423 0 00-.716-.32c-.084-.033-.218-.09-.3-.126s-.228-.092-.328-.126-.253-.088-.338-.124a17.369 17.369 0 00-1.948-.575 27.297 27.297 0 00-1.464-.281 21.1 21.1 0 00-3.136-.206c-.536 0-1.223.022-1.79.079M6.443 14.887v6.895l6.645-.02 6.645-.02v-2.288l-5.142-.039c-2.828-.022-5.15-.047-5.16-.057a33.383 33.383 0 01.053-3.489c.039-.024 2.1-.045 4.583-.043a45.191 45.191 0 004.612-.084 5.871 5.871 0 00.01-2.182A38.078 38.078 0 0014 13.466H9.412v-1.567c0-.86 0-1.57.02-1.57s2.247-.035 4.969-.057l4.952-.039v-2.2L12.9 8.01l-6.455-.02z" fill-rule="evenodd"/></g></g></svg>'),
 		"supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields" ],
-		"taxonomies" => [ "institut_esthederm", "range", "product" ],
+		"taxonomies" => [ "institut_esthederm_categories", "range", "product" ],
 		"show_in_graphql" => false,
 	];
 
@@ -378,16 +375,16 @@ function cptui_register_my_taxes() {
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"query_var" => true,
-		"rewrite" => [ 'slug' => 'institut_esthederm', 'with_front' => true, ],
+		"rewrite" => [ 'slug' => 'institut_esthederm_categories', 'with_front' => true, ],
 		"show_admin_column" => false,
 		"show_in_rest" => true,
 		"show_tagcloud" => false,
-		"rest_base" => "institut_esthederm",
+		"rest_base" => "institut_esthederm_categories",
 		"rest_controller_class" => "WP_REST_Terms_Controller",
 		"show_in_quick_edit" => false,
 		"show_in_graphql" => false,
 	];
-	register_taxonomy( "institut_esthederm", [ "institut_esthederm" ], $args );
+	register_taxonomy( "institut_esthederm_categories", [ "institut_esthederm" ], $args );
 
 	/**
 	 * Taxonomy: Etat Pur Categories.

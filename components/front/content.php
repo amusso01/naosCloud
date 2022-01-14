@@ -64,7 +64,7 @@ $the_video_query = new WP_Query( $videoArgs );
             </div>
             <div class="event-info">
               <h4><?php echo get_the_title() ?></h4>
-              <p class="excerpt"><?php echo get_the_excerpt() ?></p>
+              <p class="excerpt"><?php echo  wp_trim_words(get_the_excerpt(), 13) ?></p>
             </div>
           </a>
         </article> 
@@ -122,7 +122,7 @@ $the_upload_query = new WP_Query( $uploadsArgs );
             </div>
             <div class="event-info">
               <h4><?php echo get_the_title() ?></h4>
-              <p class="excerpt"><?php echo get_the_excerpt() ?></p>
+              <p class="excerpt"><?php echo  wp_trim_words(get_the_excerpt(), 13) ?></p>
             </div>
           </a>
         </article> 

@@ -8,6 +8,18 @@
 .badger-accordion__trigger{
   &.-ba-is-active{
     background-color: #e3e5eb;
-  
+    .badger-accordion__trigger-icon{
+      transform: rotate(0deg);
+    }
   }
+}
+
+.badger-accordion__trigger-icon{
+  &::before, &::after{
+    display: none;
+  }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22.458' height='12.62' viewBox='0 0 22.458 12.62'%3E%3Cg id='Group_1163' data-name='Group 1163' transform='translate(21.045 11.206) rotate(180)'%3E%3Cpath id='Path_6' data-name='Path 6' d='M3208.871,548l9.634,9.793,10-9.793' transform='translate(-3208.871 -548)' fill='none' stroke='%23fc0' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: center;
+  transform: rotate(180deg);
+  transition: transform 0.3s;
 }

@@ -29,7 +29,7 @@ get_header();
     </section>
 
 
-    <section class="asset-grid content-block">
+    <section id="assetGrid" class="asset-grid content-block">
 
       <?php if ( have_posts() ) : ?>
   

@@ -5,6 +5,7 @@ import { sideNav } from "../part/sideNav";
 import { dropdown } from "../part/dropdown";
 import search from "../part/search";
 import accordion from "../part/accordion"
+import { alternativeLayout } from "../part/alternativeLayout"
 
 export default {
 	init() {
@@ -23,6 +24,12 @@ export default {
     const sideEl = document.getElementById('mainNavSub')
     if (typeof(sideEl) != 'undefined' && sideEl != null){
       sideNav()
+    }
+
+    // Layout change downloads
+    const layout = document.getElementById('sortBar')
+    if (typeof(layout) != 'undefined' && layout != null){
+      alternativeLayout()
     }
     
     // DROPDOWN MENU

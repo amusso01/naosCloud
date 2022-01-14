@@ -1,5 +1,8 @@
 <form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <label for="s">Search Files:</label>
+    <input type="hidden" name="post_type[]" value="bioderma" />
+    <input type="hidden" name="post_type[]" value="institut_esthederm" />
+    <input type="hidden" name="post_type[]" value="etat_pur" />
     <input type="text" class="search-field" name="s" placeholder="" value="<?php echo get_search_query(); ?>">
     <button type="submit" id="searchSubmit">
       <svg xmlns="http://www.w3.org/2000/svg" width="20.414" height="20.414" viewBox="0 0 20.414 20.414">

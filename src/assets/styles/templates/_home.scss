@@ -4,7 +4,10 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  margin-bottom: 44px
+  margin-bottom: 44px;
+  .svg{
+    margin-bottom: 20px
+  }
 }
 .front-content{
   @extend .content-block;
