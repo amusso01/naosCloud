@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
+    "@splidejs/splide": "^3.6.10",
     "badger-accordion": "^1.2.4",
     "gsap": "npm:@gsap/member@^3.8.0",
     "hamburgers": "^1.1.3",

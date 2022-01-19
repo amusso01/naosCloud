@@ -44,7 +44,6 @@ if (is_front_page() || $isInHomeMenu ) : ?>
   <?php $isHelp = true; ?>
 <?php elseif( is_page('my-account') ) : ?>
   <?php $isAccount = true; ?>
-
 <?php endif; ?>
 
 <aside id="mainNav" class="main-nav">

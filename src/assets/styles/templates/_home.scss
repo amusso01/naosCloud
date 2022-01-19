@@ -12,9 +12,12 @@
 .front-content{
   @extend .content-block;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 75% calc(25% - 30px);
   column-gap: 4.4rem;
   padding-bottom: 170px;
+  @include media(">phone",) {
+    grid-template-columns: 75% calc(25% - 45px);
+  }
 }
 
 .front-usp-bar{

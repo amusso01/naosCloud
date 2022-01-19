@@ -1,9 +1,19 @@
 // HOW TO VIDEOS
 .glide-carousel{
-  display: grid;
-  grid-template-columns: repeat(3 , 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(3 , 1fr);
   margin-top: 30px;
+  position: relative;
 }
+.glide__arrow--right{
+  position: absolute;
+  right: -17px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+
 
 .how-to-video__item, .download__item {
   max-width: 230px;
