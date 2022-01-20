@@ -6,6 +6,7 @@ import { dropdown } from "../part/dropdown";
 import search from "../part/search";
 import accordion from "../part/accordion"
 import { alternativeLayout } from "../part/alternativeLayout"
+import fdCarousel from "../part/fdCaraousel"
 
 export default {
 	init() {
@@ -30,6 +31,12 @@ export default {
     const layout = document.getElementById('sortBar')
     if (typeof(layout) != 'undefined' && layout != null){
       alternativeLayout()
+    }
+
+    // CAROUSEL
+    const caraouselSection = document.getElementById('caraouselSection')
+    if (typeof(caraouselSection) != 'undefined' && caraouselSection != null){
+      fdCarousel();
     }
     
     // DROPDOWN MENU

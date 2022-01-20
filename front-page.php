@@ -23,7 +23,7 @@ get_header();
     </section>
 
     <section class="front-content">
-      <div class="front-content__main">
+      <div class="front-content__main" id="caraouselSection" >
         <?php get_template_part( 'components/front/content' ); ?>
       </div>
       <div class="front-content__sidebar">
