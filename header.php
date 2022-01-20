@@ -43,6 +43,9 @@ if(is_page_template('template-my-account.php') || is_page_template('template-ful
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'foundry' ); ?></a>
 	<header class="site-header">
 		<div class="site-header__inner">
+
+      <?php get_template_part( 'components/header/hamburger' ); ?>
+
 			<?php get_template_part( 'components/header/logo' ); ?>
 
 			<?php get_template_part( 'components/header/search-header' ); ?>

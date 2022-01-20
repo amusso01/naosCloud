@@ -8,8 +8,10 @@
  */
 ?>
 
-<button class="site-header__item site-header__hmaburger hamburger hamburger--collapse " id="hamburger" type="button">
-    <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-    </span>
-</button><!-- hamburger  -->
+<div class="site-header__hamburger mobOnly" id="hamburgerBtn">
+  <svg viewBox="0 0 100 80" width="40" height="40">
+    <rect width="70" height="10"></rect>
+    <rect y="30" width="70" height="10"></rect>
+    <rect y="60" width="70" height="10"></rect>
+  </svg>
+</div><!-- hamburger  -->

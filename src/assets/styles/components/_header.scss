@@ -6,13 +6,13 @@
   left: 0;
   width: 100vw;
   z-index: 8;
- 
 	&__inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
     min-height: 60px;
     padding: 0 22px;
+    position: relative;
 	}
 	&__item {
 		flex-grow: 1;
@@ -21,25 +21,62 @@
 		max-width: 268px;
     display: flex;
     align-items: center;
+    @include media('<phone-land'){
+      max-width: 180px;
+    }
     svg{
       width: 268px;
       display: block;
+      @include media('<phone-land'){
+        max-width: 180px;
+      }
     }
 	}
+  &__hamburger{
+    @include media('>tablet'){
+      display: none;
+    }
+  }
+
   // SEARCH BAR TOP
   #searchform{
     display: flex;
     align-items: flex-end;
     column-gap: 10px;
+    @include media('<tablet'){
+      position: absolute;
+      top: -60px;
+      width: 100%;
+      left: 0;
+      height: 60px;
+      background: white;
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      transition: top 0.3s, opacity 0.5s;
+      opacity: 0;
+      &.show{
+        border-top: 2px solid $color__main;
+        top: 60px;
+        opacity: 1;
+        z-index: 10;
+      }
+    }
     >label{
       color: $color__main;
       font-size: 1.4rem;
       font-weight: 600;
+      @include media('<tablet'){
+        display: none;
+      }
     }
     .search-field{
       border: none;
       border-bottom:2px solid #D1D1D1;
       width: 260px;
+      @include media('<tablet'){
+        width: 100%;
+      }
       &:focus, &:active{
         outline: none !important;
         border-color: $color__main;
@@ -53,6 +90,12 @@
         cursor: pointer;
       }
       
+    }
+    
+  }
+  .search-mobile{
+    @include media('>tablet'){
+      display: none;
     }
   }
 }

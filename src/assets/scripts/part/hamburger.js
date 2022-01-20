@@ -1,12 +1,13 @@
 export default function hamburger() {
-	// const burger = document.getElementById("hamburger");
-	// const mainMenu = document.getElementById("menu_main");
-	// const htmlElement = document.querySelector("html");
-	// burger.addEventListener("click", function (e) {
-	// 	mainMenu.classList.toggle("hidden_mobile");
-	// 	burger.classList.toggle("is-active");
+	const burger = document.getElementById("hamburgerBtn")
+	const mainMenu = document.getElementById("mainNav")
+	const sideMenu = document.getElementById("mainNavSub")
 
-	// 	// prevent content scrolling
-	// 	htmlElement.classList.toggle("noscroll");
-	// });
+	burger.addEventListener("click", function (e) {
+		mainMenu.classList.toggle("active_mobile")
+		sideMenu.classList.toggle("active_mobile")
+		burger.classList.toggle("is-active")
+
+
+	});
 }

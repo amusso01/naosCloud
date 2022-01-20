@@ -13,8 +13,14 @@
     left: #{$side-nav-width};
     width: calc(100vw - #{$side-nav-width});
   }
-
-  // FRONT PAGE
+  @include media('<tablet'){
+    left: 0;
+    width: 100%;
+    &.is-full , &.wide{
+      left: 0;
+      width: 100%;
+    }
+  }
 
 }
 
@@ -31,6 +37,13 @@
     top: 60px;
     left: 0;
     z-index: 5;
+    @include media('<tablet'){
+      left: -#{$side-nav-width};
+      transition:  left .2s;
+      &.active_mobile{
+        left: 0;
+      }
+    }
   }
   .main-subNav{
     width: #{$sub-nav-width__open};
@@ -43,10 +56,15 @@
     &.close{
       width: #{$sub-nav-width__close};
     }
+    @include media('<tablet'){
+      left: calc(-#{$sub-nav-width__open} - 20px);
+      &.active_mobile{
+        left: #{$side-nav-width};
+      }
+    }
   }
   .main{
     width: 100%;
   }
 }
 
-// Glide carousel

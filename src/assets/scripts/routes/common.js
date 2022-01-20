@@ -7,6 +7,7 @@ import search from "../part/search";
 import accordion from "../part/accordion"
 import { alternativeLayout } from "../part/alternativeLayout"
 import fdCarousel from "../part/fdCaraousel"
+import headerSearch from "../part/haederSearch"
 
 export default {
 	init() {
@@ -20,6 +21,9 @@ export default {
 
 		// Hamburger event listener
 		hamburger()
+
+		// Hamburger event listener
+		headerSearch()
 
     // SIDE NAVIGATION
     const sideEl = document.getElementById('mainNavSub')
