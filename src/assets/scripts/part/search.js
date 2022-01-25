@@ -1,9 +1,10 @@
 export default function search() {
   const orderBy = document.getElementById('orderby')
   const order = document.getElementById('order')
+  const filterIcon = document.getElementById('filterIcon')
+  const sortForm = document.getElementById('sortForm')
 
   if( orderBy && order){
-
 
     const setOrder = ()=>{
 
@@ -20,6 +21,11 @@ export default function search() {
     orderBy.addEventListener('change', setOrder)
 
     setOrder()
+
+    // MOBILE FILTER OPEN CLOSE
+    filterIcon.addEventListener('click', ()=>{
+      sortForm.classList.toggle('mobile-active')
+    })
 
   }
 

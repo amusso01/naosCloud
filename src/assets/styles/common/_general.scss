@@ -15,7 +15,7 @@ html {
     font-size: calc(100vw / 820 * 10) ;
   }
   @include media('<phone'){
-    font-size: calc(100vw / 460 * 10) ;
+    font-size: calc(100vw / 410 * 10) ;
   }
 }
 body{

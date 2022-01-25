@@ -128,6 +128,9 @@ if ( ! function_exists( 'foundry_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+    // Add support for responsive embedded content.
+    add_theme_support( 'responsive-embeds' );
+
 
 		/**
 		* Add support for core custom logo.

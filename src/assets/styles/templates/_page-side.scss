@@ -6,4 +6,7 @@
 }
 .side-template-content{
   width: 80%;
+  @include media('<phone'){
+    width: 100%;
+  }
 }

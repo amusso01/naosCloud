@@ -207,6 +207,7 @@ function cptui_register_my_cpts() {
 
 add_action( 'init', 'cptui_register_my_cpts' );
 
+// HOW TO VIDEO
 function cptui_register_my_cpts_how_to_video() {
 
 	/**
@@ -279,7 +280,137 @@ function cptui_register_my_cpts_how_to_video() {
 add_action( 'init', 'cptui_register_my_cpts_how_to_video' );
 
 
+// NAOS DOWNLOAD
+function cptui_register_my_cpts_naos_download() {
 
+	/**
+	 * Post Type: Naos.
+	 */
+
+	$labels = [
+		"name" => __( "Naos", "custom-post-type-ui" ),
+		"singular_name" => __( "Naos", "custom-post-type-ui" ),
+		"menu_name" => __( "Naos", "custom-post-type-ui" ),
+		"all_items" => __( "All Naos", "custom-post-type-ui" ),
+		"add_new" => __( "Add new", "custom-post-type-ui" ),
+		"add_new_item" => __( "Add new Naos", "custom-post-type-ui" ),
+		"edit_item" => __( "Edit Naos", "custom-post-type-ui" ),
+		"new_item" => __( "New Naos", "custom-post-type-ui" ),
+		"view_item" => __( "View Naos", "custom-post-type-ui" ),
+		"view_items" => __( "View Naos", "custom-post-type-ui" ),
+		"search_items" => __( "Search Naos", "custom-post-type-ui" ),
+		"not_found" => __( "No Naos found", "custom-post-type-ui" ),
+		"not_found_in_trash" => __( "No Naos found in trash", "custom-post-type-ui" ),
+		"parent" => __( "Parent Naos:", "custom-post-type-ui" ),
+		"featured_image" => __( "Featured image for this Naos", "custom-post-type-ui" ),
+		"set_featured_image" => __( "Set featured image for this Naos", "custom-post-type-ui" ),
+		"remove_featured_image" => __( "Remove featured image for this Naos", "custom-post-type-ui" ),
+		"use_featured_image" => __( "Use as featured image for this Naos", "custom-post-type-ui" ),
+		"archives" => __( "Naos archives", "custom-post-type-ui" ),
+		"insert_into_item" => __( "Insert into Naos", "custom-post-type-ui" ),
+		"uploaded_to_this_item" => __( "Upload to this Naos", "custom-post-type-ui" ),
+		"filter_items_list" => __( "Filter Naos list", "custom-post-type-ui" ),
+		"items_list_navigation" => __( "Naos list navigation", "custom-post-type-ui" ),
+		"items_list" => __( "Naos list", "custom-post-type-ui" ),
+		"attributes" => __( "Naos attributes", "custom-post-type-ui" ),
+		"name_admin_bar" => __( "Naos", "custom-post-type-ui" ),
+		"item_published" => __( "Naos published", "custom-post-type-ui" ),
+		"item_published_privately" => __( "Naos published privately.", "custom-post-type-ui" ),
+		"item_reverted_to_draft" => __( "Naos reverted to draft.", "custom-post-type-ui" ),
+		"item_scheduled" => __( "Naos scheduled", "custom-post-type-ui" ),
+		"item_updated" => __( "Naos updated.", "custom-post-type-ui" ),
+		"parent_item_colon" => __( "Parent Naos:", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => __( "Naos", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "naos_download", "with_front" => true ],
+		"query_var" => true,
+    'menu_icon' => 'data:image/svg+xml;base64,' . base64_encode('<svg data-name="Component 28 – 108" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path data-name="Path 2430" d="M25.169 8.658a.767.767 0 01.205.546v17.481a.82.82 0 01-.847.874.872.872 0 01-.369-.082.972.972 0 01-.287-.191L12.154 11.499v15.322a.69.69 0 01-.232.519.755.755 0 01-.533.218.739.739 0 01-.546-.218.708.708 0 01-.218-.519V9.259a.772.772 0 01.792-.819.758.758 0 01.656.3l11.771 15.869V9.205a.746.746 0 01.765-.765.732.732 0 01.56.218" fill="#2d2d2d"></path></svg>'),
+		"menu_position" => 20,
+		"supports" => [ "title", "editor", "thumbnail", "excerpt" ],
+		"taxonomies" => [ "naos_categories" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "naos_download", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_naos_download' );
+
+
+
+
+// NAOS CATEGORIES TAXONOMY
+function cptui_register_my_taxes_naos_categories() {
+
+	/**
+	 * Taxonomy: Naos Categories.
+	 */
+
+	$labels = [
+		"name" => __( "Naos Categories", "custom-post-type-ui" ),
+		"singular_name" => __( "Naos Category", "custom-post-type-ui" ),
+		"menu_name" => __( "Naos Categories", "custom-post-type-ui" ),
+		"all_items" => __( "All Naos Categories", "custom-post-type-ui" ),
+		"edit_item" => __( "Edit Naos Category", "custom-post-type-ui" ),
+		"view_item" => __( "View Naos Category", "custom-post-type-ui" ),
+		"update_item" => __( "Update Naos Category name", "custom-post-type-ui" ),
+		"add_new_item" => __( "Add new Naos Category", "custom-post-type-ui" ),
+		"new_item_name" => __( "New Naos Category name", "custom-post-type-ui" ),
+		"parent_item" => __( "Parent Naos Category", "custom-post-type-ui" ),
+		"parent_item_colon" => __( "Parent Naos Category:", "custom-post-type-ui" ),
+		"search_items" => __( "Search Naos Categories", "custom-post-type-ui" ),
+		"popular_items" => __( "Popular Naos Categories", "custom-post-type-ui" ),
+		"separate_items_with_commas" => __( "Separate Naos Categories with commas", "custom-post-type-ui" ),
+		"add_or_remove_items" => __( "Add or remove Naos Categories", "custom-post-type-ui" ),
+		"choose_from_most_used" => __( "Choose from the most used Naos Categories", "custom-post-type-ui" ),
+		"not_found" => __( "No Naos Categories found", "custom-post-type-ui" ),
+		"no_terms" => __( "No Naos Categories", "custom-post-type-ui" ),
+		"items_list_navigation" => __( "Naos Categories list navigation", "custom-post-type-ui" ),
+		"items_list" => __( "Naos Categories list", "custom-post-type-ui" ),
+		"back_to_items" => __( "Back to Naos Categories", "custom-post-type-ui" ),
+	];
+
+	
+	$args = [
+		"label" => __( "Naos Categories", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'naos_categories', 'with_front' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "naos_categories",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "naos_categories", [ "naos_download" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_naos_categories' );
 
 
 

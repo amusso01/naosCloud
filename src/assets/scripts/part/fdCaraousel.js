@@ -8,7 +8,15 @@ export default function fdCarousel(){
     perView: 3,
     focusAt: 0,
     gap: 20,
-    bound: true
+    bound: true,
+    breakpoints: {
+      1230: {
+        perView: 2
+      },
+      550: {
+        perView: 1
+      }
+    }
   }
   
   sliders.forEach(item => {

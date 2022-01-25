@@ -51,7 +51,9 @@
   column-gap: 18px;
   row-gap: 21px;
   justify-items: center;
-
+  @include media('<tablet'){
+    justify-content: center;
+  }
   .asset-grid__item{
     width: 100%;
     border-radius: 5px;
