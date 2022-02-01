@@ -9,6 +9,11 @@
 ?>
 
 <?php 
+$siteDetails = get_blog_details();
+$siteId = $siteDetails->blog_id;
+
+
+
 
 the_content();
 
@@ -44,7 +49,7 @@ $the_video_query = new WP_Query( $videoArgs );
 ?>
 
 <div class="how-to-section">
-  <h2 class="h1">How to use NAOS Cloud?</h2>
+  <h2 class="h1"><?php echo $siteId == '4' ? 'Como usar a NAOS Cloud?' : 'How to use NAOS Cloud?' ?></h2>
   <?php  
  if ( $the_video_query->have_posts() ) :?>
 

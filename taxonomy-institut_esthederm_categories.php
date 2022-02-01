@@ -24,7 +24,7 @@ get_header();
     </section>
 
     <section class="sort-bar content-block">
-      <?php get_template_part( 'components/navigation/search-bar-bioderma' ); ?>
+      <?php get_template_part( 'components/navigation/search-bar-institut' ); ?>
       <?php get_template_part( 'components/navigation/sort-bar' ); ?>
     </section>
 

@@ -8,12 +8,12 @@
  */
 
  $rangeTerms = get_terms([
-   'taxonomy' => 'range',
+   'taxonomy' => 'range_institut',
    'hide_empty' => 'false'
  ]);
 
  $productTerms = get_terms([
-   'taxonomy' => 'product',
+   'taxonomy' => 'product_institut',
    'hide_empty' => 'false'
  ]);
 

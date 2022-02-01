@@ -19,31 +19,38 @@ $isHelp = false;
 $isAccount= false;
 
 // The function return true if current page id is in certain menu
-$isInBioMenu = cms_is_in_menu('bioderma');
-$isInHomeMenu = cms_is_in_menu('home');
+$isInBioMenu = cms_is_in_menu('bioderma', get_queried_object_id());
+$isInstitutMenu = cms_is_in_menu('institut', get_queried_object_id());
+$isInHomeMenu = cms_is_in_menu('home', get_queried_object_id());
+$isInEtatMenu = cms_is_in_menu('etat', get_queried_object_id());
 
 // Retrive user menu link. N.B. in this menu there must be only the help and my account page in this order
 $userMenu = wp_get_nav_menu_items( 'user' );
 $helpLink = $userMenu[0]->url;
 $accountLink = $userMenu[1]->url;
 
+// debug($isInHomeMenu);
+// debug($isInstitutMenu);
+// debug($isInBioMenu);
+// debug(is_front_page());
 
 ?>
 
 <?php 
 // Check in which page we are and update variables accordingly
-if (is_front_page() || $isInHomeMenu ) : ?>
-  <?php $isHome = true; ?>
-<?php elseif(is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma') || $isInBioMenu) : ?>
+?>
+<?php if(is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma') || $isInBioMenu) : ?>
   <?php $isBio = true; ?>
-<?php elseif(is_page('institut-of-esthederm-home')) : ?>
+<?php elseif(is_page('institut-of-esthederm-home') || is_tax('institut_esthederm_categories') || is_singular( 'institut_esthederm') || $isInstitutMenu)  : ?>
   <?php $isInsti = true; ?>
-<?php elseif(is_page('etat-pur-home')) : ?>
+<?php elseif(is_page('etat-pur-home') || is_tax('etat_pur_categories') || is_singular( 'etat_pur') || $isInEtatMenu)  : ?>
   <?php $isEtat = true; ?>
 <?php elseif(is_page('help') ) : ?>
   <?php $isHelp = true; ?>
 <?php elseif( is_page('my-account') ) : ?>
   <?php $isAccount = true; ?>
+<?php elseif(is_front_page() || $isInHomeMenu ) : ?>
+  <?php $isHome = true; ?>
 <?php endif; ?>
 
 <aside id="mainNav" class="main-nav">

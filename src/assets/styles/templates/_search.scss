@@ -31,8 +31,23 @@
       button{
         color: $color__bright;
         border: none;
-        
+
       }
+    }
+  }
+}
+
+// No content found for download page
+.page-content{
+  >form{
+    width: auto;
+    margin-top: 20px;
+    >input{
+      width: 100%;
+    }
+    button{
+      color: $color__bright;
+      border: none;
     }
   }
 }
