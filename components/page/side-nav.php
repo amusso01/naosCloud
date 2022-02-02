@@ -66,8 +66,8 @@ $accountLink = $userMenu[1]->url;
   </div>
   <div class="bottomNav">
     <ul>
-      <li title="Help" > <span class='no-show' >Help</span><a title="Help" class="<?php echo $isHelp ? 'active' : '' ?>" href="<?php echo $helpLink  ?>"> <?php get_template_part( 'svg-template/svg', 'icon_help' ) ?></a></li>
-      <li title="My Account" > <span class='no-show' >My Account</span> <a title="My Account" class="<?php echo $isAccount ? 'active' : '' ?>" href="<?php echo $accountLink ?>"><?php get_template_part( 'svg-template/svg', 'icon_user' ) ?></a></li>
+      <li title="Help" > <span class='no-show' data-i18n-key="help" >Help</span><a title="Help" class="<?php echo $isHelp ? 'active' : '' ?>" href="<?php echo $helpLink  ?>"> <?php get_template_part( 'svg-template/svg', 'icon_help' ) ?></a></li>
+      <li title="My Account" > <span class='no-show' data-i18n-key="my-account" >My Account</span> <a title="My Account" class="<?php echo $isAccount ? 'active' : '' ?>" href="<?php echo $accountLink ?>"><?php get_template_part( 'svg-template/svg', 'icon_user' ) ?></a></li>
     </ul>
   </div>
 </aside>

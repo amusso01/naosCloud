@@ -36,7 +36,7 @@
 ?>
 
 <aside class="front__events-sidebar">
-  <h2>Events</h2>
+  <h2 data-i18n-key="events">Events</h2>
   <?php
   
   if ( $the_query->have_posts() ) :

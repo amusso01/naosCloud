@@ -1,5 +1,5 @@
 <form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-    <label for="s">Search Files:</label>
+    <label for="s" data-i18n-key="top-search">Search Files:</label>
     <input type="hidden" name="post_type[]" value="bioderma" />
     <input type="hidden" name="post_type[]" value="institut_esthederm" />
     <input type="hidden" name="post_type[]" value="etat_pur" />

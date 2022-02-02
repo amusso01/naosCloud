@@ -8,10 +8,12 @@ import accordion from "../part/accordion"
 import { alternativeLayout } from "../part/alternativeLayout"
 import fdCarousel from "../part/fdCaraousel"
 import headerSearch from "../part/haederSearch"
+import { languages } from "../part/languages";
 
 export default {
 	init() {
 		// JavaScript to be fired on all pages
+    languages()
 
     const hiddenElemnt = document.querySelectorAll('.no-show')
     hiddenElemnt.forEach(element => {element.classList.remove('no-show')});

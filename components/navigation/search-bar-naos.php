@@ -25,9 +25,9 @@
    </div>
    <form method="GET" id="sortForm" >
     <select name="orderby" id="orderby">
-      <option value="">Order by</option>
-      <option value="title" <?php echo selected( $_GET['orderby'], 'title' ) ?>>Alphabetical</option>
-      <option value="date" <?php echo selected( $_GET['orderby'], 'date' ) ?>>Newst to oldest</option>
+    <option value="" data-i18n-key="order-by">Order by</option>
+      <option value="title" data-i18n-key="alphabetical" <?php echo selected( $_GET['orderby'], 'title' ) ?>>Alphabetical</option>
+      <option value="date" data-i18n-key="new-to-old" <?php echo selected( $_GET['orderby'], 'date' ) ?>>Newst to oldest</option>
     </select>
 
     <input 
@@ -44,7 +44,7 @@
       <?php endforeach; ?>
     </select>
 
-    <button type="submit" >Apply</button>
+    <button type="submit" data-i18n-key="apply" >Apply</button>
    </form>
 
  

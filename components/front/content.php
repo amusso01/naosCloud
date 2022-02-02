@@ -22,19 +22,19 @@ the_content();
 <div class="front-usp-bar">
   <div class="icon-group">
     <?php get_template_part( 'svg-template/svg', 'access' ) ?>
-    <p>Exclusive access</p>
+    <p data-i18n-key="icon-exclusive">Exclusive access</p>
   </div>
   <div class="icon-group">
     <?php get_template_part( 'svg-template/svg',  'help') ?>
-    <p>Help & support</p>
+    <p data-i18n-key="icon-help">Help & support</p>
   </div>
   <div class="icon-group">
     <?php get_template_part( 'svg-template/svg',  'social') ?>
-    <p>Social media content</p>
+    <p data-i18n-key="icon-social">Social media content</p>
   </div>
   <div class="icon-group">
     <?php get_template_part( 'svg-template/svg',  'training') ?>
-    <p>Training</p>
+    <p data-i18n-key="icon-training">Training</p>
   </div>
 </div>
 
@@ -49,7 +49,7 @@ $the_video_query = new WP_Query( $videoArgs );
 ?>
 
 <div class="how-to-section">
-  <h2 class="h1"><?php echo $siteId == '4' ? 'Como usar a NAOS Cloud?' : 'How to use NAOS Cloud?' ?></h2>
+  <h2 class="h1" data-i18n-key="how-to-use">How to use NAOS Cloud?</h2>
   <?php  
  if ( $the_video_query->have_posts() ) :?>
 
@@ -125,7 +125,7 @@ $the_upload_query = new WP_Query( $uploadsArgs );
 
 
 <div class="download-section" style="margin-top:50px">
-  <h2 class="h1">New Uploads</h2>
+  <h2 class="h1" data-i18n-key="new-uploads">New Uploads</h2>
   <?php  
  if ( $the_upload_query->have_posts() ) :?>
  <div class="glide-carousel">
