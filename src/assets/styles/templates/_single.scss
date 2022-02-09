@@ -29,17 +29,23 @@
   }
   .download-link{
     padding: 6px 8px;
-    background-color: $color__bright;
+    background-color: $color__main;
     border-radius: 3px;
-    border: 2px solid #E8E8E8;
+    border: 2px solid $color__main;
     transition: .3s;
+    color: $color__bright;
+    svg{
+      path{
+        stroke:$color__bright;
+      }
+    }
     &:hover{
-      background-color: $color__main;
-      color: $color__bright;
+      background-color: $color__bright;
+      color: $color__main;
       border-color: $color__main;
       svg{
         path{
-          stroke:$color__bright
+          stroke:$color__main;
         }
       }
     }
@@ -53,18 +59,50 @@
     flex-direction: column;
     row-gap: 40px;
   }
-  .single-content__img-container{
-    position: relative;
-    height: 450px;
+  .single-content__img-wrapper{
     width: 80%;
+    .single-content__img-container{
+      position: relative;
+      height: 450px;
+      margin-bottom: 40px;
+      >img{
+        @extend %cover;
+  
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
     @include media('<phone'){
       width: 100%
     }
-    >img{
-      @extend %cover;
-
-      object-fit: cover;
-      border-radius: 5px;
+    .download-link{
+      padding: 6px 8px;
+      background-color: $color__main;
+      border-radius: 3px;
+      border: 2px solid $color__main;
+      transition: .3s;
+      font-weight: 600;
+      color: $color__bright;
+      span{
+        display: inline-block;
+        margin-right: 8px;
+      }
+      svg{
+       
+        path{
+          stroke:$color__bright;
+        }
+      }
+      &:hover{
+        background-color: $color__bright;
+        color: $color__main;
+        border-color: $color__main;
+        svg{
+          path{
+            stroke:$color__main;
+          }
+        }
+      }
     }
   }
 

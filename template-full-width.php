@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Page full width
- * Template Post Type:  page, post, how_to_video
+ * Template Post Type:  page, post, how_to_video, publications
  *
  *
  *
@@ -20,9 +20,11 @@ get_header();
 <main class="main full-width__main" role="main">
 
   <section class="full-width__hero">
-    
+  <?php if(is_singular('publications')) : ?>
+      <h1 style="text-align: center; padding: 50px 0px; margin-bottom:30px"><?php echo get_the_title() ?></h1>
+  <?php else : ?>
     <?php get_template_part( 'components/page/hero' ); ?>
-
+  <?php endif ?>
   </section>
 
   
