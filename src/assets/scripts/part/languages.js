@@ -1,5 +1,5 @@
 export function languages(){
-  const rootUrl = "http://79.170.44.91/naoscloud.com"
+  const rootUrl = "https://naos-cloud.com"
   const  [ locale ] = document.documentElement.lang.split('-')
 
   // USE THOSE SET ONCE ON FINAL URL. NO IP

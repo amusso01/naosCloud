@@ -47,6 +47,25 @@ $color__accent: #F8B41E;
 $color__balck: #000000;
 $color__footerBg: $color__bright;
 
+
+$colors: ( blue, $color__main ),
+	( yellow, $color__accent );
+
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
+
 /*==================================================================================
   BUTTONS
 ==================================================================================*/

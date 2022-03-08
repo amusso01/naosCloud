@@ -25,7 +25,7 @@ $text = get_field('navigation_text', 'option');
         'menu_id'           => 'menu_home',
         'container'         => 'nav',
         'container_class'   => 'main-subNav__nav',
-        'depth'             => 1
+        'depth'             => 2
     ]);
 endif;
 
@@ -33,11 +33,11 @@ endif;
   ?>
 
 
-
+<!-- 
   <article class="main-subNav__footer">
     <img class="lozad" data-src="<?php echo  $image?>" alt="Woman Skin">
     <p><?php echo $text ?></p>
-  </article>
+  </article> -->
 
   <div class="main-subNav__icon">
     <?php get_template_part( 'svg-template/svg', 'arrow_secondmenu' ) ?>
