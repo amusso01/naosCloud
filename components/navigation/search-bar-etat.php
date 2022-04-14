@@ -8,12 +8,12 @@
  */
 
  $rangeTerms = get_terms([
-   'taxonomy' => 'range_etat',
+   'taxonomy' => 'range_etat_pur',
    'hide_empty' => 'false'
  ]);
 
  $productTerms = get_terms([
-   'taxonomy' => 'product_etat',
+   'taxonomy' => 'product_etat_pur',
    'hide_empty' => 'false'
  ]);
 

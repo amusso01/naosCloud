@@ -16,7 +16,7 @@ $downloadID = $download->ID;
 // DOWNLOAD OBJECT access the object throught the methods finded in the template folder plugin. All the entry are private and no accessible directly 
 $downloadObj = download_monitor()->service( 'download_repository' )->retrieve_single($downloadID);
 
-$rangeCat = get_the_terms( $post->ID, 'range_'.$post->post_type );
+$rangeCat = get_the_terms( $post->ID, 'range_institut_esthederm' );
 $productsCat = get_the_terms( $post->ID, 'product_'.$post->post_type );
 
 

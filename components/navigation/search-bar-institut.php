@@ -8,12 +8,12 @@
  */
 
  $rangeTerms = get_terms([
-   'taxonomy' => 'range_institut',
+   'taxonomy' => 'range_institut_esthederm',
    'hide_empty' => 'false'
  ]);
 
  $productTerms = get_terms([
-   'taxonomy' => 'product_institut',
+   'taxonomy' => 'product_institut_esthederm',
    'hide_empty' => 'false'
  ]);
 

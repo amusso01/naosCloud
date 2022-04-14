@@ -676,7 +676,7 @@ function cptui_register_my_taxes_range_institut() {
 		"show_in_quick_edit" => false,
 		"show_in_graphql" => false,
 	];
-	register_taxonomy( "range_institut", [ "institut_esthederm" ], $args );
+	register_taxonomy( "range_institut_esthederm", [ "institut_esthederm" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes_range_institut' );
 
@@ -731,7 +731,7 @@ function cptui_register_my_taxes_range_etat() {
 		"show_in_quick_edit" => false,
 		"show_in_graphql" => false,
 	];
-	register_taxonomy( "range_etat", [ "etat_pur" ], $args );
+	register_taxonomy( "range_etat_pur", [ "etat_pur" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes_range_etat' );
 
@@ -841,7 +841,7 @@ function cptui_register_my_taxes_product_institut() {
 		"show_in_quick_edit" => false,
 		"show_in_graphql" => false,
 	];
-	register_taxonomy( "product_institut", [ "institut_esthederm" ], $args );
+	register_taxonomy( "product_institut_esthederm", [ "institut_esthederm" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes_product_institut' );
 
@@ -896,7 +896,7 @@ function cptui_register_my_taxes_product_etat() {
 		"show_in_quick_edit" => false,
 		"show_in_graphql" => false,
 	];
-	register_taxonomy( "product_etat", [ "etat_pur" ], $args );
+	register_taxonomy( "product_etat_pur", [ "etat_pur" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes_product_etat' );
 
