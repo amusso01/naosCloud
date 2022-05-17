@@ -48,6 +48,7 @@ the_content();
 $the_video_query = new WP_Query( $videoArgs );
 ?>
 
+<?php if(is_front_page()) : ?>
 <div class="how-to-section">
   <h2 class="h1" data-i18n-key="how-to-use">How to use NAOS Cloud?</h2>
   <?php  
@@ -97,6 +98,7 @@ $the_video_query = new WP_Query( $videoArgs );
   
   ?>
 </div>
+<?php endif; ?>
 
 
 <?php 

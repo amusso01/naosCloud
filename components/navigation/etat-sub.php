@@ -20,9 +20,9 @@
   </nav> -->
 
   <?php 
-  if ( has_nav_menu( 'etat' ) ) :
+  if ( has_nav_menu( 'etat-menu' ) ) :
     wp_nav_menu([
-        'theme_location'    => 'etat',
+        'theme_location'    => 'etat-menu',
         'menu_id'           => 'menu_bio',
         'container'         => 'nav',
         'container_class'   => 'main-subNav__nav',

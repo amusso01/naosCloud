@@ -20,9 +20,9 @@
   </nav> -->
 
   <?php 
-  if ( has_nav_menu( 'bioderma' ) ) :
+  if ( has_nav_menu( 'bioderma-menu' ) ) :
     wp_nav_menu([
-        'theme_location'    => 'bioderma',
+        'theme_location'    => 'bioderma-menu',
         'menu_id'           => 'menu_bio',
         'container'         => 'nav',
         'container_class'   => 'main-subNav__nav',

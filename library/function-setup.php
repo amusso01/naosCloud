@@ -51,9 +51,9 @@ $GTM_id = '';
 function wpseed_register_theme_menus() {
   register_nav_menus([
     'home' => __('Home menu'),
-    'institut' => __('Institut Esthederm menu'),
-    'etat' => __('Etat Pur menu'),
-    'bioderma' => __('Bioderma menu'),
+    'institut-menu' => __('Institut Esthederm menu'),
+    'etat-menu' => __('Etat Pur menu'),
+    'bioderma-menu' => __('Bioderma menu'),
     'user' => __('User menu')
   ]);
 }

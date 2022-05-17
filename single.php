@@ -8,6 +8,8 @@
  */
 
 get_header();
+
+$imageBanner = get_field('download_image_banner');
 ?>
 
 <div class="site-container">
@@ -17,8 +19,11 @@ get_header();
 <main class="main single-main"  role="main">
 
   <section class="site-hero">
-    
-    <?php get_template_part( 'components/hero/hero-tax' ); ?>
+    <?php if($imageBanner) :?>
+      <?php get_template_part( 'components/hero/hero-single' ); ?>
+    <?php else : ?>
+      <?php get_template_part( 'components/hero/hero-tax' ); ?>
+    <?php endif; ?>
 
   </section>
 

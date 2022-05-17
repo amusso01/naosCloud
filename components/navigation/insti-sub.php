@@ -20,9 +20,9 @@
   </nav> -->
 
   <?php 
-  if ( has_nav_menu( 'institut' ) ) :
+  if ( has_nav_menu( 'institut-menu' ) ) :
     wp_nav_menu([
-        'theme_location'    => 'institut',
+        'theme_location'    => 'institut-menu',
         'menu_id'           => 'menu_bio',
         'container'         => 'nav',
         'container_class'   => 'main-subNav__nav',

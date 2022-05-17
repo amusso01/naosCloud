@@ -18,11 +18,13 @@ $isEtat = false;
 $isHelp = false;
 $isAccount= false;
 
-// The function return true if current page id is in certain menu
-$isInBioMenu = cms_is_in_menu('bioderma', get_queried_object_id());
-$isInstitutMenu = cms_is_in_menu('institut', get_queried_object_id());
-$isInHomeMenu = cms_is_in_menu('home', get_queried_object_id());
-$isInEtatMenu = cms_is_in_menu('etat', get_queried_object_id());
+$pageObjID = get_queried_object_id();
+
+// The function return true if current page id is in certain menu | see cms_is_in_menu in function-dev
+$isInBioMenu = cms_is_in_menu(8, $pageObjID);
+$isInstitutMenu = cms_is_in_menu(18, $pageObjID);
+$isInHomeMenu = cms_is_in_menu('home', $pageObjID);
+$isInEtatMenu = cms_is_in_menu(19, $pageObjID);
 
 // Retrive user menu link. N.B. in this menu there must be only the help and my account page in this order
 $userMenu = wp_get_nav_menu_items( 'user' );
@@ -31,11 +33,10 @@ $accountLink = $userMenu[1]->url;
 
 $adminUrl = get_admin_url();
 
-
 // debug($isInHomeMenu);
 // debug($isInstitutMenu);
 // debug($isInBioMenu);
-// debug(is_front_page());
+// debug($pageObjID);
 
 ?>
 
