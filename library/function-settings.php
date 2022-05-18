@@ -350,7 +350,7 @@ function we_login_logo() {
 			color: <?php echo $mainColor ?>;
 		}
 /* NAOS STYLE */
-<?php $bgImage = get_template_directory_uri().'/dist/images/noas-login.jpeg' ?>
+<?php $bgImage = get_template_directory_uri().'/dist/images/naos-login.jpeg' ?>
     body.login{
       background-image:url('<?php echo $bgImage ?>');
       background-position:center center;
