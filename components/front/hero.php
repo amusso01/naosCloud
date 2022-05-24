@@ -34,7 +34,9 @@
       ?>
     </div>
     <div class="name">
-      <h1><?php echo is_front_page() ? 'Home' : get_the_title() ?></h1>
+
+      <h1><?php echo is_front_page() ? '' : get_the_title() ?></h1>
+
     </div>
-  </div>
+  </div> 
 </div>

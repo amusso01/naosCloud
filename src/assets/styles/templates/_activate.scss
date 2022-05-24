@@ -1,32 +1,38 @@
-#signup-content{
-  position: absolute;
-  top: 70px;
-  width: 100%;
-  left: 0;
-  #signup-welcome{
-    margin: 20px 0;
-  }
-  .view, .view a{
-    font-size: 16px;
-  }
-  .wp-activate-container{
-    margin-top: 50px;
-  }
-  #activateform{
-    .submit{
-      margin-top: 15px;
-      #submit{
-        background-color: $color__main;
-        color: $color__bright;
-        width: 50%;
-        border: none;
-        padding: 5px;
-        &:hover{
-          cursor: pointer;
-          background-color: $color__accent;
-          color: $color__balck;
-        }
-      }
-    }
-  }
+#signup-content {
+	position: absolute;
+	top: 70px;
+	width: 100%;
+	left: 0;
+	#signup-welcome {
+		margin: 20px 0;
+	}
+	.view,
+	.view a {
+		font-size: 16px;
+	}
+	.wp-activate-container {
+		margin-top: 50px;
+	}
+	#activateform {
+		.submit {
+			margin-top: 15px;
+			#submit {
+				background-color: $color__main;
+				color: $color__bright;
+				width: 50%;
+				border: none;
+				padding: 5px;
+				&:hover {
+					cursor: pointer;
+					background-color: $color__accent;
+					color: $color__balck;
+				}
+			}
+		}
+	}
+}
+#signup-content {
+	.wp-activate-container {
+		padding-right: 80px;
+	}
 }
