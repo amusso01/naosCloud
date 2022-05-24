@@ -148,17 +148,17 @@ add_action( 'wp', 'members_only' );
 
 // REDIRECT USER AFTEER LOGIN
 
-function custom_login_redirect( $redirect_to, $request, $user ) {
-if ( isset( $user->roles ) && is_array( $user->roles ) ) {
-  if ( in_array( 'administrator', $user->roles ) || in_array( 'editor', $user->roles ) || in_array( 'author', $user->roles ) ) {
-    $redirect_to = home_url('/');
-  } else {
-    $redirect_to = home_url('/');
-  }
-}
-return $redirect_to;
-}
-add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
+// function custom_login_redirect( $redirect_to, $request, $user ) {
+// if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+//   if ( in_array( 'administrator', $user->roles ) || in_array( 'editor', $user->roles ) || in_array( 'author', $user->roles ) ) {
+//     $redirect_to = home_url('/');
+//   } else {
+//     $redirect_to = home_url('/');
+//   }
+// }
+// return $redirect_to;
+// }
+// add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
 
 
 // HIDE WORDPRESS BAR
