@@ -104,6 +104,10 @@ $the_video_query = new WP_Query( $videoArgs );
 <?php 
 $postType = '';
 
+if(is_front_page(  )){
+  $postType = array('bioderma', 'etat_pur', 'institut_esthederm' );
+}
+
 if(is_page('institut-of-esthederm-home')) {
   $postType = 'institut_esthederm';
 }

@@ -29,7 +29,7 @@
       elseif(is_page('etat-pur-home')) {
         get_template_part( 'svg-template/svg', 'etat-logo' ) ;
       }else{
-        get_template_part( 'svg-template/svg', 'naos_logo' ) ;
+        get_template_part( 'svg-template/svg', 'naos_cloud' ) ;
       }
       ?>
     </div>

@@ -23,7 +23,7 @@ $pageObjID = get_queried_object_id();
 // The function return true if current page id is in certain menu | see cms_is_in_menu in function-dev
 $isInBioMenu = cms_is_in_menu(8, $pageObjID);
 $isInstitutMenu = cms_is_in_menu(18, $pageObjID);
-$isInHomeMenu = cms_is_in_menu('home', $pageObjID);
+$isInHomeMenu = cms_is_in_menu( 7, $pageObjID);
 $isInEtatMenu = cms_is_in_menu(19, $pageObjID);
 
 // Retrive user menu link. N.B. in this menu there must be only the help and my account page in this order
@@ -33,8 +33,8 @@ $accountLink = $userMenu[1]->url;
 
 $adminUrl = get_admin_url();
 
-// debug($isInHomeMenu);
 // debug($isInstitutMenu);
+// dd($isInHomeMenu);
 // debug($isInBioMenu);
 // debug($pageObjID);
 
@@ -45,6 +45,8 @@ $adminUrl = get_admin_url();
 ?>
 <?php if(is_page('bioderma-home') || is_tax('bioderma_categories') || is_singular( 'bioderma') || $isInBioMenu) : ?>
   <?php $isBio = true; ?>
+<?php elseif(is_front_page() || $isInHomeMenu ) : ?>
+  <?php $isHome = true; ?>
 <?php elseif(is_page('institut-of-esthederm-home') || is_tax('institut_esthederm_categories') || is_singular( 'institut_esthederm') || $isInstitutMenu)  : ?>
   <?php $isInsti = true; ?>
 <?php elseif(is_page('etat-pur-home') || is_tax('etat_pur_categories') || is_singular( 'etat_pur') || $isInEtatMenu)  : ?>
@@ -53,8 +55,6 @@ $adminUrl = get_admin_url();
   <?php $isHelp = true; ?>
 <?php elseif( is_page('my-account') ) : ?>
   <?php $isAccount = true; ?>
-<?php elseif(is_front_page() || $isInHomeMenu ) : ?>
-  <?php $isHome = true; ?>
 <?php endif; ?>
 
 <aside id="mainNav" class="main-nav">

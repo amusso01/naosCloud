@@ -42,14 +42,14 @@
     >
 
 
-    <select name="range" id="range">
+    <select name="range_etat" id="range">
       <option value="" data-i18n-key="search-by-range">Search by Range</option>
       <?php foreach($rangeTerms as $range) : ?>
         <option value="<?php echo $range->slug ?>" <?php echo selected( $_GET['range'], $range->slug ) ?>><?php echo $range->name ?></option>
       <?php endforeach; ?>
     </select>
 
-    <select name="product" id="product">
+    <select name="product_etat_pur" id="product">
       <option value="" data-i18n-key="search-by-product">Search by Product</option>
       <?php foreach($productTerms as $product) : ?>
         <option value="<?php echo $product->slug ?>" <?php echo selected( $_GET['product'], $product->slug ) ?>><?php echo $product->name ?></option>

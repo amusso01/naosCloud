@@ -37,7 +37,7 @@
     value="<?php echo (isset($_GET['order']) && $_GET['order'] == 'ASC') ? 'ASC' : 'DESC'; ?>"
     >
 
-    <select name="range" id="range">
+    <select name="naos_categories" id="range">
       <option value="">Search by Categories</option>
       <?php foreach($naosCat as $range) : ?>
         <option value="<?php echo $range->slug ?>" <?php echo selected( $_GET['range'], $range->slug ) ?>><?php echo $range->name ?></option>

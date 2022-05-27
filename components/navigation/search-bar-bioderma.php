@@ -41,20 +41,19 @@
     value="<?php echo (isset($_GET['order']) && $_GET['order'] == 'ASC') ? 'ASC' : 'DESC'; ?>"
     >
 
-    <select name="range" id="range">
+    <select name="range_bioderma" id="range">
       <option value="" data-i18n-key="search-by-range">Search by Range</option>
       <?php foreach($rangeTerms as $range) : ?>
         <option value="<?php echo $range->slug ?>" <?php echo selected( $_GET['range'], $range->slug ) ?>><?php echo $range->name ?></option>
       <?php endforeach; ?>
     </select>
 
-    <select name="product" id="product">
+    <select name="product_bioderma" id="product">
       <option value="" data-i18n-key="search-by-product">Search by Product</option>
       <?php foreach($productTerms as $product) : ?>
         <option value="<?php echo $product->slug ?>" <?php echo selected( $_GET['product'], $product->slug ) ?>><?php echo $product->name ?></option>
       <?php endforeach; ?>
     </select>
-
     <button type="submit"  data-i18n-key="apply" >Apply</button>
    </form>
 
