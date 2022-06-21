@@ -28,7 +28,7 @@
       }
       elseif(is_page('etat-pur-home')) {
         get_template_part( 'svg-template/svg', 'etat-logo' ) ;
-      }else{
+      }elseif(is_front_page()){
         get_template_part( 'svg-template/svg', 'naos_cloud' ) ;
       }
       ?>
