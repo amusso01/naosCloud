@@ -606,3 +606,53 @@ function add_allow_upload_extension_exception( $types, $file, $filename, $mimes 
   return $types;
 }
 add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );
+
+// TODO
+//  =================  ******** IMPORTANT  START ******  ===============
+// those email are global for all the site, so remember to create a function that detect URL, language .... of the site
+// when we realse a new Site. Or just kill those function, probably they won't be required anymore and the client has forgot about this for sure
+// 
+
+// EMAIL
+//* Password reset
+
+function reset_pass_subject($subject) {
+  $title = __( 'NAOS Cloud I Alteração de Senha' );
+  return $title;
+}
+add_filter('retrieve_password_title', 'reset_pass_subject');
+
+
+
+function reset_pass_email($message, $reset_key, $user_login, $user_data) {
+  $link = get_bloginfo('url') . '/wp-login.php?action=rp&key=' . $reset_key . '&login=' . rawurlencode($user_login);
+  ob_start();
+  ?>
+
+  Caro Praceiro,
+  recebemos o seu pedido de redefinição de senha.
+  <?= $user_data->user_login ?>:
+  Para redefinir a sua senha clique no link abaixo
+  <?= $link;?>
+  
+  Se não tiver efetuado este pedido ignore este email.
+
+  Os melhores cumprimentos
+  Equipa NAOS Portugal
+  <?php
+  $message = ob_get_contents();
+  ob_end_clean();
+  return $message;
+}
+add_filter('retrieve_password_message', 'reset_pass_email', 10, 4);
+
+
+// welcome
+
+function user_new_subject($subject) {
+  $title = __( 'Bem-vindo ao NAOS Cloud' );
+  return $title;
+}
+add_filter('wpmu_signup_user_notification_subject', 'user_new_subject');
+
+//  =================   IMPORTANT END   ===============
