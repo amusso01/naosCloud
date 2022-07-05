@@ -610,7 +610,7 @@ add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception',
 // TODO
 //  =================  ******** IMPORTANT  START ******  ===============
 // those email are global for all the site, so remember to create a function that detect URL, language .... of the site
-// when we realse a new Site. Or just kill those function, probably they won't be required anymore and the client has forgot about this for sure
+// when we release a new Site ( like the UK one). Or just kill those function, probably they won't be required anymore and the client has forgot about this for sure
 // 
 
 // EMAIL
@@ -656,3 +656,26 @@ function user_new_subject($subject) {
 add_filter('wpmu_signup_user_notification_subject', 'user_new_subject');
 
 //  =================   IMPORTANT END   ===============
+
+function wpdocs_remove_users_columns( $columns ) {
+ 
+  unset( $columns['name'] ); 
+  return $columns;
+}
+
+add_filter( 'manage_users_columns', 'wpdocs_remove_users_columns' );
+
+//Adds Custom Column To Users List Table
+function custom_add_user_id_column($columns) {
+  $columns['user_nickname'] = 'Name';
+  return $columns;
+}
+add_filter('manage_users_columns', 'custom_add_user_id_column');
+//Adds Content To The Custom Added Column
+function custom_show_user_id_column_content($value, $column_name, $user_id) {
+  $user = get_user_meta($user_id,'nickname',true); 
+  if ( 'user_nickname' == $column_name )
+      return $user;
+  return $value;
+}
+add_filter('manage_users_custom_column',  'custom_show_user_id_column_content', 10, 3);
