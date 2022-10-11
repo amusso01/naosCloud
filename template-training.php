@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page training
+ * Template Name: training
  * Template Post Type:  page
  *
  *

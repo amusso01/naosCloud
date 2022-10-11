@@ -629,8 +629,8 @@ function reset_pass_email($message, $reset_key, $user_login, $user_data) {
   ob_start();
   ?>
 
-  Caro Praceiro,
-  recebemos o seu pedido de redefinição de senha.
+  Caro Parceiro,
+  Recebemos o seu pedido de redefinição de senha.
   <?= $user_data->user_login ?>:
   Para redefinir a sua senha clique no link abaixo
   <?= $link;?>
@@ -657,6 +657,9 @@ add_filter('wpmu_signup_user_notification_subject', 'user_new_subject');
 
 //  =================   IMPORTANT END   ===============
 
+
+
+
 function wpdocs_remove_users_columns( $columns ) {
  
   unset( $columns['name'] ); 
@@ -673,9 +676,19 @@ function custom_add_user_id_column($columns) {
 add_filter('manage_users_columns', 'custom_add_user_id_column');
 //Adds Content To The Custom Added Column
 function custom_show_user_id_column_content($value, $column_name, $user_id) {
-  $user = get_user_meta($user_id,'nickname',true); 
+  $user = get_user_meta($user_id,'first_name',true); 
   if ( 'user_nickname' == $column_name )
       return $user;
   return $value;
 }
 add_filter('manage_users_custom_column',  'custom_show_user_id_column_content', 10, 3);
+
+
+// Restrict users from accessing the admin-area
+function restrict_admin()
+{
+    if ( ! current_user_can( 'manage_sites' ) ) {
+        wp_redirect( site_url() );
+    }
+}
+add_action( 'admin_init', 'restrict_admin', 1 );
