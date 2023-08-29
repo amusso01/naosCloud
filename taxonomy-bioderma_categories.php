@@ -38,6 +38,8 @@ get_header();
          <?php get_template_part( 'components/page/grid-item' ); ?>
   
         <?php endwhile; ?>
+        
+ 
   
       <?php else :?>
   
@@ -47,6 +49,11 @@ get_header();
       
     </section>
 
+    <?php if ( have_posts() ) : ?>
+      <div class="content-block pagination__container">
+        <?php do_pagination() ?>
+      </div>
+    <?php endif; ?>
   </main>
 
   

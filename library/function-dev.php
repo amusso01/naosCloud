@@ -202,3 +202,48 @@ function cms_is_in_menu( $menu = null, $object_id = null ) {
   return in_array( (int) $object_id, $menu_items );
 
 }
+
+/**
+ * Generates markup for post pagination
+ * @param  string  $pages optionally pass in a number of pages
+ * @param  integer $range how many pages to show on either side of the current page
+ */
+function do_pagination($the_query = null, $pages = '', $range = 4) {  
+  global $paged, $wp_query;
+  
+  $showitems = ($range * 2)+1;
+  $query     = (is_null($the_query)) ? $wp_query : $the_query;
+
+  if(empty($paged)) $paged = 1;
+
+  if($pages == '') {
+    $pages = $query->max_num_pages;
+
+    if(!$pages) {
+      $pages = 1;
+    }
+  }   
+  if(1 != $pages) {
+    echo '<ul class="pagination">';
+    if($paged > 2 && $paged > $range+1) {
+      echo "<li class='pager-first first'><a href='".get_pagenum_link(1)."' class='arrow'>&laquo;</a></li>";
+    }
+    if($paged > 1) {
+      echo "<li class='pager-previous'><a href='".get_pagenum_link($paged - 1)."' class='current'>&lsaquo;</a></li>";
+    }
+
+    for ($i=1; $i <= $pages; $i++) {
+      if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
+        echo ($paged == $i)? "<li class='pager-current current'><a href=\"\">".$i."</a></li>":"<li class='pager-item'><a href='".get_pagenum_link($i)."' >".$i."</a></li>";
+      }
+    }
+
+    if ($paged < $pages) {
+      echo "<li class='pager-next'><a href='".get_pagenum_link($paged + 1)."' class='arrow'>&rsaquo;</a>";
+    }
+    if ($paged < $pages-1 &&  $paged+$range-1 < $pages) {
+      echo "<li class='pager-last last'><a href='".get_pagenum_link($pages)."' class='arrow'>&raquo;</a></li>";
+    } 
+    echo "</ul>\n";
+  }
+}

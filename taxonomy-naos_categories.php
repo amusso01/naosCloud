@@ -47,6 +47,12 @@ get_header();
       
     </section>
 
+    <?php if ( have_posts() ) : ?>
+      <div class="content-block pagination__container">
+        <?php do_pagination() ?>
+      </div>
+    <?php endif; ?>
+
   </main>
 
   
