@@ -118,6 +118,12 @@
         right: -172px;
       }
     }
+    &:nth-child(1){
+      >span{
+        width: 70px;
+        right: -102px;
+      }
+    }
     > span{
       position: absolute;
       right: -122px;

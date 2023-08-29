@@ -61,7 +61,7 @@ $adminUrl = get_admin_url();
   <div class="topNav">
     <nav>
       <ul>
-        <li><span class='no-show' >Naos Cloud</span><a title="Naos" class="<?php echo $isHome ? 'active' : '' ?>" href="<?php echo site_url('/')  ?>"><?php get_template_part( 'svg-template/svg', 'desk_home' ) ?></a></li>
+        <li><span class='no-show' >NAOS</span><a title="Naos" class="<?php echo $isHome ? 'active' : '' ?>" href="<?php echo site_url('/')  ?>"><?php get_template_part( 'svg-template/svg', 'desk_home' ) ?></a></li>
         <li><span class='no-show' >Bioderma</span><a title="Bioderma" class="<?php echo $isBio ? 'active' : '' ?>" href="<?php echo site_url('/bioderma-home')  ?>"><?php get_template_part( 'svg-template/svg', 'desk_bioderma' ) ?></a></li>
         <li><span class='no-show' >Institut Esthederm</span><a title="Institut Esthederm" class="<?php echo $isInsti ? 'active' : '' ?>" href="<?php echo site_url('/institut-of-esthederm-home')  ?>"><?php get_template_part( 'svg-template/svg', 'desk_institut' ) ?></a></li>
         <li><span class='no-show' >Etat Pur</span><a title="Etat Pur" class="<?php echo $isEtat ? 'active' : '' ?>" href="<?php echo site_url('/etat-pur-home')  ?>"><?php get_template_part( 'svg-template/svg', 'desk_etatpur' ) ?></a></li>
